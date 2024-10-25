@@ -3,7 +3,9 @@ sidebar_position: 99
 ---
 # About Ac6
 
-AC6 is a registered company established in Paris region, France. AC6 deliver a full range of services ranging from training to technical support and consulting services for embedded electronic systems. Development tools were recently added to the portfolio of solutions to offer a complete service to electronic developers. Partners include Zephyr, NXP, STMicroelectronics, Linux Foundation and Percepio.
+![Ac6 Activities](/img/ac6/ac6_sectors.svg)
+
+**AC6** is a registered company established in Paris region, France. AC6 deliver a full range of services ranging from training to technical support and consulting services for embedded electronic systems. Development tools were recently added to the portfolio of solutions to offer a complete service to electronic developers. Partners include Zephyr, NXP, STMicroelectronics, Linux Foundation and Percepio.
 
 AC6 offers are structured in several entities:
 

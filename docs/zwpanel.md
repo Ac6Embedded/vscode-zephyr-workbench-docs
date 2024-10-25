@@ -1,5 +1,9 @@
-Zephyr Workbench Shortcuts
---------------------------
+---
+sidebar_position: 11
+---
+# Views
+
+## Zephyr Workbench Shortcuts
 This panel gives your shortcut to the most used features of Zephyr Workbench
 
 - New West Workspace
@@ -7,8 +11,7 @@ This panel gives your shortcut to the most used features of Zephyr Workbench
 - New Zephyr SDK
 - Debug Manager
 
-Applications
-------------
+## Applications
 This panel lists the applications detected in your multi-root workspace.
 Many actions and configuration on the application project can be run here:
 
@@ -38,8 +41,7 @@ Many actions and configuration on the application project can be run here:
 - Open in Explorer (open the folder in the Explorer view)
 - Open Terminal (open a local terminal for the application)
 
-West Workspaces
----------------
+## West Workspaces
 This panel lists the west workspace imported into your multi-root workspace.
 
 The actions on the west workspace are:
@@ -48,8 +50,7 @@ The actions on the west workspace are:
 - Open Terminal (open a local terminal for the west workspace)
 
 
-Zephyr SDK
-----------
+## Zephyr SDK
 This panel lists the SDK saved in Zephyr Workbench settings
 
 The actions on this panel are:
@@ -57,8 +58,7 @@ The actions on this panel are:
 - Remove Zephyr SDK (remove from the list without deleting the files)
 - Delete from disk (fully delete the SDK folder from the system (irreversible))
 
-Host Tools
-----------
+## Host Tools
 Hub panel to manage external tools
 - Install/Reinstall Host Tools (install the required tools to use Zephyr Workbench)
 - Reinstall Virtual Environment (reset the initial venv)
@@ -66,6 +66,5 @@ Hub panel to manage external tools
 - Install Debug Tools (check the status and get the link to install external debug tools)
 - Debug Manager (configure the debug session)
 
-Other Resources
----------------
+## Other Resources
 Several links to Zephyr documentation and other useful resources

@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Zephyr Workbench',
-  tagline: 'Zephyr Workbench',
+  tagline: 'Online documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ac6', // Usually your GitHub org/user name.
-  projectName: 'zephyr-workbench', // Usually your repo name.
+  organizationName: 'Ac6Embedded', // Usually your GitHub org/user name.
+  projectName: 'vscode-zephyr-workbench', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -68,6 +68,16 @@ const config = {
             label: 'Tutorial',
           },
           {
+            href: 'https://codex.ac6.fr/',
+            label: 'Codex',
+            position: 'left',
+          },
+          {
+            href: 'https://www.ac6-training.com/cours.php?ref=oRT5',
+            label: 'Zephyr Training',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/Ac6Embedded/vscode-zephyr-workbench',
             label: 'GitHub',
             position: 'right',
@@ -75,14 +85,19 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'Ac6',
+          src: 'img/ac6/logo_ac6.svg',
+          href: 'https://www.ac6.fr'
+        },
         links: [
           {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Getting Started',
+                to: '/docs/category/getting-started',
               },
             ],
           },
@@ -90,16 +105,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Youtube',
+                href: 'https://www.youtube.com/@Ac6Embedded',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'X/Twitter',
+                href: 'https://www.twitter.com/Ac6Embedded',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/company/ac6',
               },
             ],
           },
@@ -113,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ac6. Built with Docusaurus.`,
+        copyright: `Copyright © 2004-${new Date().getFullYear()} Ac6. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

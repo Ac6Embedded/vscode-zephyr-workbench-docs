@@ -28,3 +28,13 @@
   --ifm-color-primary-lightest: #91caf0;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+img {
+  display: block;
+  margin: auto;
+}
+
+img[alt="Ac6 Activities"] {
+  width: 50%;
+}
+

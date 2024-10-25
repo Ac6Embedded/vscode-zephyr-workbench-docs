@@ -10,6 +10,10 @@ On every platform, you might need to install the debug server and the JTAG probe
 * LinkServer Debug Host Tools
 * J-Link Debug Host Tools
 
+:::info
+On **Linux** and **MacOSX**, the Host tools and Debug tools are installed from a **BASH** script. Ensure bash is installed on your system.
+:::
+
 On MacOSX, Homebrew is mandatory to install required tools (such as python3, CMake or Ninja) for the build system. To install Homebrew, please refer to the official [documentation](https://brew.sh/). 
 
 :::danger[Note]
@@ -52,10 +56,10 @@ To complete the host tools installation, go the Zephyr Workbench tab then click 
 |                      | Libsdl2-dev         |                      |
 |                      | Libmagic1           |                      |
 
-:::tip[Note]
+:::note
 
-The portable tools are installed under $USERDIR/.zinstaller or under $VSCODE_PORTABLE/data/.zinstaller if your are using VSCode in [portable mode](https://code.visualstudio.com/docs/editor/portable/).
+The portable tools are installed under `$USERDIR/.zinstaller` or under `$VSCODE_PORTABLE/data/.zinstaller` if your are using VSCode in [portable mode](https://code.visualstudio.com/docs/editor/portable/).
 
-Uninstalling Zephyr Workbench does not uninstall the host tools.
+Uninstalling Zephyr Workbench does not uninstall the host tools. You can manually delete the `.zinstaller` folder.
 
 :::
