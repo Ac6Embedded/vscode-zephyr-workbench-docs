@@ -21,7 +21,6 @@ installation. If the listed tools are already installed on your system, just can
 is shown.
 
 ![Root Prompt](/img/zw/getting-started/linux/zw_2_install-host-tools-root.png)
-
 :::
 
    * This process downloads and installs portable version of tools required in the Zephyr buildsystem such as:
@@ -124,14 +123,12 @@ identifying ST-Link as a USB device. If you already have the udev rules set up u
 ### Debug the application
 
 After starting the debug session, the code should breaks on main or early (depends on optimization on your project). 
-<!-- 
+
 ![Debug application](/img/zw/getting-started/linux/zw_10_debug.png)
--->
 
 The "Debug Toolbar" allows you to **Continue/Pause**, **Step Over**, **Step Into**, **Step Out**, **Restart** or , **Stop**
-<!-- 
+
 ![Debug Toolbar](/img/zw/getting-started/linux/zw_11_debug-toolbar.png)
--->
 
 More information about [Debugging on VSCODE](https://code.visualstudio.com/docs/editor/debugging)
    
@@ -141,6 +138,4 @@ To re-run the debug, you don't have to open the "Debug Manager" again as the lau
    * Select the launch configuration for your project
    * Click on the Run button
 
-![Run Debug](/img/zw/getting-started/linux/zw_11_rerun-debug.png)
-
-
+![Run Debug](/img/zw/getting-started/linux/zw_12_rerun-debug.png)
