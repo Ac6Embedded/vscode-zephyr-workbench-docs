@@ -4,4 +4,75 @@ sidebar_position: 7
 # Debug Session
 
 ## Create and configure the debug session
-(Coming soon...)
+
+:::warning
+The debug server tool required for your board may need to be installed on your system before you can start debugging.
+Only pyOCD is install by default.
+:::
+
+### Debug Manager
+
+To create or configure the debug session, click on "Debug Manager" to open a debug configuration form.
+
+![Debug Manager](/img/zw/debug/zw_debug_manager.png)
+
+#### Application
+Select the application to debug. The page is then filled with default values.
+
+#### Program
+- Enter the path to the ELF image.
+- Enter the CMSIS-SVD file of your target (It is the XML-based file describing your device processor and peripherals).
+
+#### GDB
+Zephyr Workbench use cross GNU Debugger(GDB) as debugger, configure it if needed.
+- Enter the path to the cross-gdb (by default, it selects the GDB from the Zephyr SDK).
+- Enter the TCP/IP address of the debug connection.
+- Enter the TCP/IP port of the debug connection.
+
+#### Debug Server
+The debug server allow to connect the program to the remote GDB. In Zephyr west, it is also called *runner*. 
+- Select the runner:
+  - A (compatible) annotation indicates which runners are supported for your target.
+  - After choosing a runner, a message appears to indicate whether the runner is installed on your system.
+  - If the runner is not installed, click on the "Install" button to be redirected to the "Install Debug Tools" page.
+- Enter the path to the runner executable if it is not set in the **PATH** environment variable.
+- Enter additional arguments to configure the debug server (often not needed)
+
+:::tip
+To display the list of options of the runner, run the following command on terminal:
+```bash
+west debug --runner <runner_name> -H
+```
+:::
+
+Click on "Apply" to save the debug session. The newly debug configuration is named "Zephyr Workbench Debug \<application_name\>"
+
+## Start debugging
+
+To start the debug session, click on "Debug".
+If a previous debug session was already configure, you can relaunch the debug session from VS Code **Run and Debug** view.
+1. Go to the "Run and Debug" (Ctrl+Shift+D) activity panel
+2. Select the launch configuration for your project
+3. Click on the Run button
+   
+![Run and Debug](/img/zw/debug/zw_debug_run_session.png)
+
+## Debug your application
+
+After starting the debug session, the code should breaks on main or earlier (depends on optimizations set up for your project). 
+![Debug Overview](/img/zw/debug/zw_debug_overview.png)
+
+The "Debug Toolbar" allows you to **Continue/Pause**, **Step Over**, **Step Into**, **Step Out**, **Restart** or , **Stop**
+![Debug Toolbar](/img/zw/debug/zw_debug_toolbar.png)
+
+Inspect variables and CPU registers on the left panel
+![Debug Variables](/img/zw/debug/zw_debug_variables.png)
+
+If the SVD file was set in the debug configuration, the peripherals are displayed in the "xperipherals" view.
+![Debug XPeripherals](/img/zw/debug/zw_debug_xperipherals.png)
+
+To debug in disassembly, right-click on the code then select "Open Disassembly View"
+![Debug Open DASM](/img/zw/debug/zw_debug_open_disasm.png)
+![Debug DASM](/img/zw/debug/zw_debug_disasm.png)
+
+More information about [Debugging on VSCODE](https://code.visualstudio.com/docs/editor/debugging)

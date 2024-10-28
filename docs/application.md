@@ -7,6 +7,8 @@ sidebar_position: 5
 Before creating an application, it is mandatory to have a Zephyr SDK and a West workspace.
 The creation process is based on sample provided by Zephyr.
 
+![Create New Application](/img/zw/applications/zw_app_create.png)
+
 1. Click on "New Application"
 2. Select a parent west workspace, the workspace folder is scanned to detect the available boards and samples
 3. Select a SDK (if your use a minimal SDK, not every boards are compatible)
@@ -27,12 +29,16 @@ If you already have an application sources, you can import and configure it for 
 5. Select the target board
 
 ## Application structure
-The application consists on:
-  .vscode/
-  src/
-  CMakeLists.txt
-  prj.conf
+The application consists at least on:
+```
+application
+├── src               // Source directory
+├── CMakeLists.txt    // Link the application to the Zephyr's CMake build system
+├── prj.conf          // KConfig fragment
+└── build             // Build directory (generated)
 
+```
+Other optional files and overlay can be added. For more information, refer to the Zephyr [Application Development](https://docs.zephyrproject.org/latest/develop/application/index.html).
 
 ## Build Application
 To build from the "Applications" panel
@@ -41,3 +47,6 @@ To build from the "Applications" panel
 - Click on the build button right next to the project
 
 On the "Explorer" view, if a source file of your project is opened in the editor, a Build shortcut button is displayed in the status bar on the bottom.
+
+## Manage Application
+

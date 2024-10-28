@@ -10,7 +10,7 @@ To import a new SDK, click on the "New Zephyr SDK" button.
 
 ![New Zephyr SDK](/img/zw/sdk/zw_sdk_new.png)
 
-## Source location: 
+## Source location 
 
 - **Official SDK**:
 Import a full or minimal SDK from official sources
@@ -57,7 +57,7 @@ On the current version, the supported toolchains are:
 
 After importing a Zephyr SDK, it appears in the **ZEPHYR SDK** panel on the left. SDKs are registered globally in VS Code settings, making them accessible across any VS Code instance.
 
-![New Zephyr SDK](/img/zw/sdk/zw_sdk_manage.png)
+![Manage Zephyr SDK](/img/zw/sdk/zw_sdk_manage.png)
 
 In the **ZEPHYR SDK** panel, you can:
 
