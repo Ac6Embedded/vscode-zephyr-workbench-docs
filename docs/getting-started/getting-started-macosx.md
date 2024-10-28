@@ -46,7 +46,7 @@ brew uninstall <package>
 After installing the tools, it also generates a python virtual environment with every Zephyr requirement.
 :::
 
-<!--![Install Host Tools](/img/zw/getting-started/darwin/zw_1_install-host-tools.png)-->
+![Install Host Tools](/img/zw/getting-started/darwin/zw_1_install-host-tools.png)
 
 ### Import a Zephyr SDK
    * Click on "Import SDK" button
@@ -59,7 +59,7 @@ After installing the tools, it also generates a python virtual environment with 
         - Location: enter the parent location where to import the Zephyr SDK
    * Click on "Import"   
 
-<!--![Import SDK](/img/zw/getting-started/darwin/zw_3_sdk-import.png)-->
+![Import SDK](/img/zw/getting-started/darwin/zw_3_sdk-import.png)
 
 
 ### Initialize a West Workspace
@@ -74,7 +74,7 @@ After installing the tools, it also generates a python virtual environment with 
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
 
-<!--![Import West Workspace](/img/zw/getting-started/darwin/zw_4_west-workspace-init.png)-->
+![Import West Workspace](/img/zw/getting-started/darwin/zw_4_west-workspace-init.png)
 
 
 ## Creating and building the project
@@ -90,13 +90,13 @@ On Zephyr Workbench, new project are based on samples from Zephyr sources.
    * Enter the project location
    * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 
-<!--![Create New Project](/img/zw/getting-started/darwin/zw_5_app-create.png)-->
+![Create New Project](/img/zw/getting-started/darwin/zw_5_app-create.png)
 
 
 ### Edit your code
 Edit your project if needed, to access to the project sources, go back to the "Explorer" panel
 
-<!--![Edit source code](/img/zw/getting-started/darwin/zw_6_app-edit.png)-->
+![Edit source code](/img/zw/getting-started/darwin/zw_6_app-edit.png)
 
 
 :::tip
@@ -108,14 +108,14 @@ To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, rig
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-<!--![Build Application](/img/zw/getting-started/darwin/zw_7_app-build.png)-->
+![Build Application](/img/zw/getting-started/darwin/zw_7_app-build.png)
 
 ## Debugging the application
 ### Install Debug tools
    * Click on "Install Debug Tools" to open the debug tools manager
    * Click on the Install icon of **OpenOCD**
 
-<!--![Install Debug Tools](/img/zw/getting-started/darwin/zw_8_debug-tools-install.png)-->
+![Install Debug Tools](/img/zw/getting-started/darwin/zw_8_debug-tools-install.png)
 
 ### Configure the debug session
    * Click on "Debug Manager" to open a debug configuration form
@@ -130,18 +130,18 @@ To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, rig
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-<!--![Edit Debug Configuration](/img/zw/getting-started/darwin/zw_9_debug-manager.png)-->
+![Edit Debug Configuration](/img/zw/getting-started/darwin/zw_9_debug-manager.png)
 
 ### Debug the application
 
 After starting the debug session, the code should breaks on main or early (depends on optimization on your project). 
 
-<!--![Debug application](/img/zw/getting-started/darwin/zw_10_debug.png)-->
+![Debug application](/img/zw/getting-started/darwin/zw_10_debug.png)
 
 
 The "Debug Toolbar" allows you to **Continue/Pause**, **Step Over**, **Step Into**, **Step Out**, **Restart** or , **Stop**
 
-<!--![Debug Toolbar](/img/zw/getting-started/darwin/zw_11_debug-toolbar.png)-->
+![Debug Toolbar](/img/zw/getting-started/darwin/zw_11_debug-toolbar.png)
 
 More information about [Debugging on VSCODE](https://code.visualstudio.com/docs/editor/debugging)
    
@@ -151,4 +151,4 @@ To re-run the debug, you don't have to open the "Debug Manager" again as the lau
    * Select the launch configuration for your project
    * Click on the Run button
 
-<!--[Run Debug](/img/zw/getting-started/darwin/zw_12_rerun-debug.png)-->
+![Run Debug](/img/zw/getting-started/darwin/zw_12_rerun-debug.png)
