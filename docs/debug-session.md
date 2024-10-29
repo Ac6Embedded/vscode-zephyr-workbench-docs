@@ -47,6 +47,10 @@ west debug --runner <runner_name> -H
 
 Click on "Apply" to save the debug session. The newly debug configuration is named "Zephyr Workbench Debug \<application_name\>"
 
+:::note
+If `pyocd` is selected, the debug starting process can take some time to update the support of your target.
+:::
+
 ## Start debugging
 
 To start the debug session, click on "Debug".

@@ -23,7 +23,11 @@ The creation process is based on sample provided by Zephyr.
 If you already have an application sources, you can import and configure it for Zephyr Workbench
 
 1. Click on "Import Application" button
+![Import Application](/img/zw/applications/zw_app_import.png)
+
 2. Enter the application directory or click on the folder icon to open file browser
+![Import Application Wizard](/img/zw/applications/zw_app_import_wiz1.png)
+
 3. Select the west workspace to attach your application to
 4. Select SDK to use
 5. Select the target board
@@ -43,10 +47,50 @@ Other optional files and overlay can be added. For more information, refer to th
 ## Build Application
 To build from the "Applications" panel
 - Right-click on your project > Build
-   \<or\>
+    - or
 - Click on the build button right next to the project
 
 On the "Explorer" view, if a source file of your project is opened in the editor, a Build shortcut button is displayed in the status bar on the bottom.
 
+![Import Application Wizard](/img/zw/applications/zw_build.png)
+
 ## Manage Application
 
+After creating or importing an Application, it appears in the **APPLICATIONS** panel on the left. The folder is also added to your VS Code multi-root workspace an you can open the code editor from the "Explorer" view.
+
+In the **APPLICATIONS** panel, you can:
+- **Build**
+- **Clean**
+  - Rebuild/ Pristine: Fully clean the items from the build folder then build the project.
+  - Delete Build: Delete the *build* directory.
+  - Ninja clean: Delete the objects and binary only.
+- **Configure**
+  - GUI Config: Open the Gui Config in new window to configure the Zephyr kernel.
+  - Menuconfig: Open the Menuconfig in terminal to configure the Zephyr kernel.
+  - Change Board.
+  - Change West Workspace: Associate the Application to another west workspace.
+  - Change Build Pristine Setting.
+- **Memory Analysis**
+  - RAM Report: List compiled object and their RAM usage.
+  - ROM Report: List compiled object and their ROM usage.
+  - Puncover: Start puncover webserver, page displayed in web navigator.
+- **Run**
+- **Debug**: Search for existing debug session or open Debug Manager.
+- **Generate SPDX**: Generate SPDX 2.3 tag-value document.
+- **Delete from disk**: Fully delete the application folder from the system (irreversible).
+- **Local Environment**
+  - Create local Python Virtual environment: Generate a venv for the application only.
+  - Set Python virtual environment: Set your own venv, enter the path to the activate script.
+- **Open Containing folder**: Open the application folder on your File Explorer.
+- **Open in Explorer**: Open the folder in the "Explorer" view.
+- **Open Terminal**: Open a local terminal for the application.
+
+![Import Application Wizard](/img/zw/applications/zw_app_manage.png)
+
+Additionally, you can set some Zephyr Build System Variables:
+- **EXTRA_CONF_FILE**: Additional Kconfig configuration fragment files.
+- **EXTRA_DTC_OVERLAY_FILE**: Additional devicetree overlay files.
+- **EXTRA_ZEPHYR_MODULES**: Absolute paths to the additional modules.
+  
+Click on the [+] icon to add a value. The environment variable values are stored in the 
+`application/.vscode/settings.json` of your west workspace folder.

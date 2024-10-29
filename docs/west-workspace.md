@@ -53,7 +53,7 @@ In the **WEST WORKSPACES** panel, you can:
 - **Delete from Disk**: Permanently delete the SDK folder from your system (this action is irreversible).
 - **Open Terminal**: Open a terminal instance with the build environment and the environment variables
 - **Edit variables**: On the west workspace, you can set the *ARCH_ROOT*, *SOC_ROOT*, *BOARD_ROOT* and *DTS_ROOT* variables to customize the
-the target definition location. Click on the [+] icon to add a value.
+the target definition location. Click on the [+] icon to add a value. The environment variable are stored in the `west_workspace/.vscode/settings.json` of your west workspace folder.
 
 ![Manage West Workspace Add Env](/img/zw/workspace/zw_west_workspace_manage-env1.png)
 ![Manage West Workspace Edit Env](/img/zw/workspace/zw_west_workspace_manage-env2.png)

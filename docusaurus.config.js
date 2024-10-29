@@ -63,9 +63,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           {
             href: 'https://codex.ac6.fr/',
@@ -89,7 +89,7 @@ const config = {
         logo: {
           alt: 'Ac6',
           src: 'img/ac6/logo_ac6.svg',
-          href: 'https://www.ac6.fr'
+          href: 'https://www.ac6.fr',
         },
         links: [
           {
