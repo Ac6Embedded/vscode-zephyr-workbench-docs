@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 # West Workspace
 
@@ -40,6 +40,14 @@ Enter the location with the name of the west-workspace
 The import process runs west init and update to get the sources
 
 ![New West Workspace](/img/zw/workspace/zw_west_workspace_import.png)
+
+:::warning[known issue]
+If you might experience issue while importing from  **Repository** with python error `PermissionError: [WinError 5] Access is denied`, 
+the case happens when VS Code locks the working directory.
+
+The workaround is to close VS Code, init the west workspace manually using `west init -m <zephyr_repo_url> --mr <version> <dest_dir>` 
+then import the initialize directory into Zephyr Workbench.
+:::
 
 ## Manage West Workspace
 

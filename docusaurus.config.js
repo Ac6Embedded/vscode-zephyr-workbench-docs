@@ -67,6 +67,12 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorials',
+          // },
           {
             href: 'https://codex.ac6.fr/',
             label: 'Codex',

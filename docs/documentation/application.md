@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 # Applications
 
@@ -91,6 +91,10 @@ Additionally, you can set some Zephyr Build System Variables:
 - **EXTRA_CONF_FILE**: Additional Kconfig configuration fragment files.
 - **EXTRA_DTC_OVERLAY_FILE**: Additional devicetree overlay files.
 - **EXTRA_ZEPHYR_MODULES**: Absolute paths to the additional modules.
-  
-Click on the [+] icon to add a value. The environment variable values are stored in the 
+Click on the [+] icon to add a value. 
+
+You can also set add:
+- **WEST ARGUMENTS**: Additional argument to west build command (affect the tasks.json)
+
+The environment variable values and west arguments are stored in the 
 `application/.vscode/settings.json` of your west workspace folder.
