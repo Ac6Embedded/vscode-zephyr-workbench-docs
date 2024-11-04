@@ -93,7 +93,7 @@ Additionally, you can set some Zephyr Build System Variables:
 - **EXTRA_ZEPHYR_MODULES**: Absolute paths to the additional modules.
 Click on the [+] icon to add a value. 
 
-You can also set add:
+You can also set:
 - **WEST ARGUMENTS**: Additional argument to west build command (affect the tasks.json)
 
 The environment variable values and west arguments are stored in the 

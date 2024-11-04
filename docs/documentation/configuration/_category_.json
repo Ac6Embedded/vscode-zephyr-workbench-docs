@@ -1,0 +1,9 @@
+{
+  "label": "Configuration",
+  "position": 7,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Configure the application"
+  }
+}
