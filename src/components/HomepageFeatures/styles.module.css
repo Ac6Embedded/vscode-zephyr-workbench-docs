@@ -12,7 +12,7 @@
   max-width: 100%;
 }
 
-.features a:hover, a:visited, a:link, a:active {
+.features a {
   color: var(--ifm-text-color);
   text-decoration: none
 }
