@@ -3,48 +3,56 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
-/*  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+  {
+    title: 'Documentation',
+    Svg: require('@site/static/img/zephyr-workbench_logo.svg').default,
+    to: '/docs/documentation/zephyr-workbench',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Find the complete user documentation that provides an in-depth look at every 
+        features and capability of Zephyr Workbench.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Zephyr Project',
+    Svg: require('@site/static/img/zephyr_logo.svg').default,
+    to: 'https://zephyrproject.org/',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The Zephyr Project is an open source Linux Foundation project. It provides 
+        a best-in-class small, scalable, real-time operating system (RTOS) optimized 
+        for resource-constrained devices, across multiple architectures.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'About Ac6',
+    Svg: require('@site/static/img/ac6/logo_ac6.svg').default,
+    to: 'https://www.ac6-training.com/cours.php?ref=oRT5',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Ac6 specializes in training for embedded real-time systems and Linux. 
+        Ac6 also provides engineering, consulting and expertise. Among their 
+        offerings is a comprehensive Zephyr training course that attracted hundreds 
+        of engineers. 
       </>
     ),
-  },*/
+  },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, to, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <a href={to}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} role="img" preserveAspectRatio="xMidYMid meet"/>
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </a>
     </div>
   );
 }

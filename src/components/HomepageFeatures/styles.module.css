@@ -8,4 +8,11 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.features a:hover, a:visited, a:link, a:active {
+  color: var(--ifm-text-color);
+  text-decoration: none
 }

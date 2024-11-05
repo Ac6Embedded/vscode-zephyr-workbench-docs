@@ -12,5 +12,5 @@ the option mode:
 
 - **auto**: The `west build` command auto-detects situations when build directory needs to be made clean. 
 - **always**: Always clean the build directory before build
-- **none**: No attempt to detect if build directory needs to be made clean before build.
+- **never**: No attempt to detect if build directory needs to be made clean before build.
 
