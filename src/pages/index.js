@@ -28,6 +28,14 @@ function HomepageHeader() {
   );
 }
 
+function HomepagePicture() {
+  return (
+    <section>
+      <img class="homePicture" src="/img/zw/zw_overall.png"></img>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -36,6 +44,7 @@ export default function Home() {
       description="Online documentation of VSCode extension Zephyr Workbench developed by Ac6">
       <HomepageHeader />
       <main>
+        <HomepagePicture />
         <HomepageFeatures />
       </main>
     </Layout>
