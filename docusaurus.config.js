@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Zephyr Workbench',
-  tagline: 'A VS Code extension for Zephyr projects on every platforms',
+  tagline: 'A VS Code extension for Zephyr projects on all platforms',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -53,6 +53,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/zw-social-card.jpg',
+      metadata: [
+        {name: 'keywords', content: 'zephyr, development'},
+      ],
       navbar: {
         title: 'Zephyr Workbench',
         logo: {
