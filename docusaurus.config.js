@@ -12,10 +12,7 @@ const config = {
   tagline: 'A VS Code extension for Zephyr projects on all platforms',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://zephyr-workbench.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
@@ -54,7 +51,7 @@ const config = {
     ({
       image: 'img/zw-social-card.jpg',
       metadata: [
-        {name: 'keywords', content: 'zephyr, development'},
+        {name: 'keywords', content: 'Zephyr Workbench, Zephyr, Development, VS Code for Zephyr'},
       ],
       navbar: {
         title: 'Zephyr Workbench',
