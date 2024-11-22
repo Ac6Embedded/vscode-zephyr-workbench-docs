@@ -81,7 +81,6 @@ Edit your project if needed, to access to the project sources, go back to the "E
 
 ![Edit source code](/img/zw/getting-started/linux/zw_6_app-edit.png)
 
-
 :::tip
 To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
 :::
@@ -103,6 +102,12 @@ To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, rig
 :::info
 For STM32 targets with an integrated ST-Link on Linux, **STM32CubeProgrammer** provides the necessary udev rules for 
 identifying ST-Link as a USB device. If you already have the udev rules set up under `/etc/udev/rules.d`, installing STM32CubeProgrammer is not necessary.
+
+After installing **STM32CubeProgrammer**, find the rules files under `PATH_TO\STM32CubeProgrammer\Drivers\rules` and copy them into `/etc/udev/rules.d`:
+
+```
+cp <PATH_TO>\STM32CubeProgrammer\Drivers\rules\*.conf /etc/udev/rules.d
+```
 :::
 
 ### Configure the debug session

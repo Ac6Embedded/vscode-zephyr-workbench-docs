@@ -10,7 +10,7 @@ To change the application target board, right-click on the application > Configu
 A Quick picks selector is displayed with the list of boards from the West workspace and the custom board.
 
 :::info
-It can takes several seconds to parse the list of boards before showing the selector.
+There may be a slight delay before the board selector appears. This delay occur as the extension runs `west boards` to find every boards directories from West workspace and any custom board locations and parses the board definition files (`board.yml` and `<board_identifier>.yaml`).
 :::
 
 Use the text area to search your target board then press `ENTER` to confirm change.

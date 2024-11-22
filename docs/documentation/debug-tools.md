@@ -14,6 +14,13 @@ Other tools needs the user to register to the editor website and accept license.
 **OpenOCD** (Open On-Chip Debugger ) is an open source project that provides on-chip programming and debugging support with a
 layered architecture of JTAG interface and TAP support. OpenOCD can be installed from the "Debug Tools" page.
 
+**STM32CubeProgrammer** is a programming tool for STM32 products. It is not used for debug but for STM32 targets with an integrated ST-Link or to use an external ST-Link probe, a driver is required for identifying ST-Link as a USB device:
+On Windows, **STM32CubeProgrammer** provides a ST-Link driver installer.
+On Linux, **STM32CubeProgrammer** provides the necessary udev rules. If you already have the udev rules set up under `/etc/udev/rules.d`, installing STM32CubeProgrammer is not necessary otherwise after installing **STM32CubeProgrammer**, find the rules files under `PATH_TO\STM32CubeProgrammer\Drivers\rules` and copy them into `/etc/udev/rules.d`:
+```
+cp <PATH_TO>\STM32CubeProgrammer\Drivers\rules\*.conf /etc/udev/rules.d
+```
+
 **J-Link** is a external debug probe from SEGGER. It supports a large number of devices from different hardware architectures and vendors.
 It is not provided with Zephyr Workbench. Please refer to [SEGGER website](https://www.segger.com/downloads/jlink/) to download and to install 
 J-Link driver and JLinkServer.
