@@ -12,6 +12,12 @@ It provides several extension headers (such as Arduino or FRDM).
 
 ![FRDM-MCXN947](/img/tutorials/frdm-mcxn947/FRDM-MCXN947-TOP.png)
 
+Before starting this tutorial, you might need to install [LinkServer](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/linkserver-for-microcontrollers:LINKERSERVER), the utility for launching and managing GDB servers for NXP debug probes. This tool is required for flashing and debugging your code. More details in the [Flash and Debug](#flash-and-debug-project) section.
+
+## Installation
+
+Please follow the [Installation](/docs/documentation/installation) guide.
+
 ## Import a SDK
 
 Import a minimal SDK for ARM target. 
@@ -24,7 +30,7 @@ Import a minimal SDK for ARM target.
     - Version: v0.17.0
     - Toolchains: arm
     - Location: enter the parent location where to import the Zephyr SDK (eg. `path/to/sdk/arm-zephyr-sdk-0.17.0`)
-* Click on "Import" 
+* Click on "Import"
 
 ![Import SDK](/img/tutorials/frdm-mcxn947/zw_import_sdk.gif)
 
@@ -45,7 +51,7 @@ Import a minimal west workspace for NXP.
 (the directory name will serve as workspace name, eg. `path/to/workspace/nxp-zephyr-v3.7.0`).
 (it takes several minutes to init then update the workspace)
 * Click on "Import"
-* 
+  
 ![Init workspace](/img/tutorials/frdm-mcxn947/zw_import_westworkspace.gif)
   
 After the **Workspace** is download and installed, it is listed in the **WEST WORKSPACES** view.
@@ -80,12 +86,18 @@ The development board has a MCU-Link CMSIS-DAP Onboard Debug Probe. It is compat
 * J-Link - https://www.segger.com/downloads/jlink/
 * pyOCD
 
-pyOCD is provided with Zephyr Workbench, unlike LinkServer or J-Link. 
+pyOCD is provided with Zephyr Workbench, unlike LinkServer or J-Link. If LinkServer or J-Link are installed into their default
+destination, Zephyr Workbench can automatically detect the executable. Otherwise, either edit the PATH environment variable to
+with the path to the executable or inform the runner path in the **Debug Manager**.
 
 Connect your machine with the FRDM-MCXN947 on the USB-C MCU Link port.
 
 * Open the "Debug Manager" 
 * Select the `blinky` application (The page takes several second to auto-complete)
 * Select `LinkServer` as runner ("Runner executable found" should be displayed if the probe software is installed on your system)
+* If the runner is not found, enter the path to it executable.
   
 ![Debug configuration](/img/tutorials/frdm-mcxn947/zw_debug_config.gif)
+
+* Click on "Apply" to save the debug configuration.
+* Click on "Debug" to start the debug session.

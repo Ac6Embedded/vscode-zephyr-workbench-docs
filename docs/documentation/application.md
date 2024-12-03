@@ -67,6 +67,7 @@ In the **APPLICATIONS** panel, you can:
 - **Configure**
   - GUI Config: Open the Gui Config in new window to configure the Zephyr kernel.
   - Menuconfig: Open the Menuconfig in terminal to configure the Zephyr kernel.
+  - Harden Config: Run config hardening tools.
   - Change Board.
   - Change West Workspace: Associate the Application to another west workspace.
   - Change Build Pristine Setting.
@@ -96,5 +97,6 @@ Click on the [+] icon to add a value.
 You can also set:
 - **WEST ARGUMENTS**: Additional argument to west build command (affect the tasks.json)
 
-The environment variable values and west arguments are stored in the 
-`application/.vscode/settings.json` of your west workspace folder.
+The environment variable values and west arguments are stored in the `application/.vscode/settings.json` 
+of your west workspace folder. West arguments can be used to enable Sysbuild by adding `--sysbuild` in
+value.
