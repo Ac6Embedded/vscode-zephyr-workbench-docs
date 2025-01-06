@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 10
 ---
 # Debug Session
 
@@ -18,6 +18,8 @@ To create or configure the debug session, click on "Debug Manager" to open a deb
 
 #### Application
 Select the application to debug. The page is then filled with default values.
+
+If you have set multiple build configuration, select the configuration to debug, otherwise the value should be `primary`
 
 :::warning[known issue]
 For application that where not built, it might take several seconds before default values are loaded.
