@@ -2,7 +2,7 @@
 
 This page objective is to guide you step by step on how to create your first Zephyr application on the Arduino UNO R4 WiFi board.
 
-The Arduino UNO R4 WiFi  a development board featuring the Renesas RA4M1 SoC with a 32-bit ARM Cortex-M4 in the Arduino form factor and is compatible with traditional Arduino. 
+The Arduino UNO R4 WiFi a development board featuring the Renesas RA4M1 SoC with a 32-bit ARM Cortex-M4 in the Arduino form factor and is compatible with traditional Arduino. 
 
 - Vendor: Arduino
 - Architecture: arm
@@ -32,7 +32,7 @@ Import a minimal SDK for ARM target.
 
 After the **SDK** is download and installed, it is listed in the **ZEPHYR SDK** view.
 
-## Import NXP minimal west workspace
+## Import Renesas minimal west workspace
 
 Import a minimal west workspace for NXP.
 
