@@ -9,6 +9,8 @@ ESP32-DevKitC is a low-footprint and entry-level development board that is part 
 - Architecture: xtensa
 - SoC: esp32
   
+![ESP32-DevKitC-WROVER](/img/tutorials/esp32-devkitc-wrover/esp32_devkitc_wrover.jpg)
+  
 ## Installation
 
 Please follow the [Installation](/docs/documentation/installation) guide.
@@ -23,10 +25,10 @@ Import a Zephyr SDK with every toolchains.
     - Source location: Official SDK
     - SDK Type: Full
     - Version: v0.17.0
-    - Location: enter the parent location where to import the Zephyr SDK (eg. `path/to/sdk/arm-zephyr-sdk-0.17.0`)
+    - Location: enter the parent location where to import the Zephyr SDK (eg. `path/to/sdk/zephyr-sdk-0.17.0`)
 * Click on "Import"
 
-<!--![Import SDK](/img/tutorials/arduino-uno-r4-wifi/zw_import_sdk.gif)-->
+![Import SDK](/img/tutorials/esp32-devkitc-wrover/zw_import_sdk.png)
 
 After the **SDK** is download and installed, it is listed in the **ZEPHYR SDK** view.
 
@@ -45,7 +47,7 @@ Import the full west workspace.
 (it takes several minutes to init then update the workspace)
 * Click on "Import"
   
-<!--![Init workspace](/img/tutorials/arduino-uno-r4-wifi/zw_import_westworkspace.gif)-->
+![Init workspace](/img/tutorials/esp32-devkitc-wrover/zw_import_westworkspace.png)
   
 After the **Workspace** is download and installed, it is listed in the **WEST WORKSPACES** view.
 
@@ -62,7 +64,7 @@ The environment set up complete. We are now going to create a `hello_world` proj
 * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 * Click on "Create"
 
-<!--![Create hello_world](/img/tutorials/arduino-uno-r4-wifi/zw_create_app.gif)-->
+![Create hello_world](/img/tutorials/esp32-devkitc-wrover/zw_create_app.png)
 
 When the project creation is done, it appears on the **APPLICATIONS** view.
 
@@ -76,16 +78,17 @@ CONFIG_BUILD_OUTPUT_HEX=y
 This example covers simple boot mode (without 2nd stage bootloader). You might need to configure the project to support MCUboot or Sysbuild.
 :::
 
-
 To build the project, right-click on it, then select "Build". The build output is displayed in the *Terminal*.
 
-<!--![Build](/img/tutorials/arduino-uno-r4-wifi/zw_build_app.gif)-->
+![Build](/img/tutorials/esp32-devkitc-wrover/zw_build_app.gif)
 
 ## Flash project
 
 ESP32-DevKitC-WROVER flashing process use esptool.py and data are transferred on serial port. Ensure the ESP32 serial port is not busy before flashing.
 
 To flash the application, right-click on the project > Run, then select `--runner esp32`.
+
+![Flash](/img/tutorials/esp32-devkitc-wrover/zw_flash_app.gif)
 
 ## Debug project
 
