@@ -8,7 +8,7 @@ ESP32-DevKitC is a low-footprint and entry-level development board that is part 
 - Vendor: Espressif Systems
 - Architecture: xtensa
 - SoC: esp32
-  
+    
 ![ESP32-DevKitC-WROVER](/img/tutorials/esp32-devkitc-wrover/esp32_devkitc_wrover.jpg)
   
 ## Installation
@@ -89,6 +89,10 @@ ESP32-DevKitC-WROVER flashing process use esptool.py and data are transferred on
 To flash the application, right-click on the project > Run, then select `--runner esp32`.
 
 ![Flash](/img/tutorials/esp32-devkitc-wrover/zw_flash_app.gif)
+
+:::note
+The ESP32-DevKitC-WROVER has a CP210x USB to UART Bridge. If device driver does not install automatically, you can download it from [Silicon Labs website](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads).
+:::
 
 ## Debug project
 
