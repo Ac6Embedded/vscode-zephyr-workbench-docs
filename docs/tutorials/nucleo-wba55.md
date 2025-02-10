@@ -88,7 +88,7 @@ Connect your machine with the ST Nucleo WBA55CG on the USB-C connector.
 
 * Open the "Debug Manager" 
 * Select the `blinky` application (The page takes several second to auto-complete). The build configuration should be `primary`.
-* Select `pyOCD` as runner ("Runner executable found" should be displayed if the probe software is installed on your system)
+* Select `openocd` as runner ("Runner executable found" should be displayed if the probe software is installed on your system)
 * If the runner is not found, enter the path to it executable.
   
 ![Debug configuration](/img/tutorials/nucleo-wba55cg/zw_debug_blinky.gif)

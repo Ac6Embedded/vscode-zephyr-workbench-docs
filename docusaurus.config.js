@@ -89,6 +89,11 @@ const config = {
             position: 'left',
           },
           {
+            href: 'https://marketplace.visualstudio.com/items?itemName=Ac6.zephyr-workbench',
+            label: 'VSCode Marketplace',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Ac6Embedded/vscode-zephyr-workbench',
             label: 'GitHub',
             position: 'right',
@@ -136,6 +141,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/Ac6Embedded/vscode-zephyr-workbench',
               },
+              {
+                label: 'VSCode Marketplace',
+                href: 'https://marketplace.visualstudio.com/items?itemName=Ac6.zephyr-workbench',
+              }
             ],
           },
         ],

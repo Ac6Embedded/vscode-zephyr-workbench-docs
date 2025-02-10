@@ -4,13 +4,13 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Documentation',
+    title: 'VSCode Extension',
     Svg: require('@site/static/img/zephyr-workbench_logo.svg').default,
-    to: '/docs/documentation/zephyr-workbench',
+    to: 'https://marketplace.visualstudio.com/items?itemName=Ac6.zephyr-workbench',
     description: (
       <>
-        Find the complete user documentation that provides an in-depth look at every 
-        features and capability of Zephyr Workbench.
+        Download the Zephyr Workbench VSCode Extension from the Marketplace. The extension is
+        compatible on Windows, Linux x86 and Mac OSX aarch64.
       </>
     ),
   },
