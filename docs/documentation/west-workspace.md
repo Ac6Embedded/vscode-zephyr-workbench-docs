@@ -3,7 +3,7 @@ sidebar_position: 5
 ---
 # West Workspace
 
-The **West Workspace** is a folder with the **.west** subdirectory and west manifest repository in it. It indicates to location to clone the Zephyr sources as well as the module and application projects. The West Workspace is created using **west init** and populated using **west update**.
+The **West Workspace** is a folder that contains the **.west** subdirectory and the west manifest repository. It specifies the location to clone the Zephyr sources, as well as the module and application projects. The West Workspace is created using **west init** and populated using **west update**.
 
 For more information about west workspaces and its topology, please refer the Zephyr Project [documentation](https://docs.zephyrproject.org/latest/develop/west/workspaces.html).
 

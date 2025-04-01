@@ -92,6 +92,8 @@ Additionally, you can set some Zephyr Build System Variables:
 - **EXTRA_CONF_FILE**: Additional Kconfig configuration fragment files.
 - **EXTRA_DTC_OVERLAY_FILE**: Additional devicetree overlay files.
 - **EXTRA_ZEPHYR_MODULES**: Absolute paths to the additional modules.
+- **SHIELD**: Select from available shields.
+
 Click on the [+] icon to add a value. 
 
 You can also set:
