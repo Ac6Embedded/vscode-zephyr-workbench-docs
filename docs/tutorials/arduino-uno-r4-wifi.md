@@ -1,8 +1,8 @@
 # Getting started with Arduino UNO R4 WIFI
 
-This page objective is to guide you step by step on how to create your first Zephyr application on the Arduino UNO R4 WiFi board.
+This guide provides step-by-step instructions to build your first Zephyr application targeting the Arduino UNO R4 WiFi board.
 
-The Arduino UNO R4 WiFi a development board featuring the Renesas RA4M1 SoC with a 32-bit ARM Cortex-M4 in the Arduino form factor and is compatible with traditional Arduino. 
+The Arduino UNO R4 WiFi is a development board featuring the Renesas RA4M1 SoC with a 32-bit ARM Cortex-M4 in the Arduino form factor and is compatible with traditional Arduino. 
 
 - Vendor: Arduino
 - Architecture: arm
@@ -26,7 +26,7 @@ Import a minimal SDK for ARM target.
     - Version: v0.17.0
     - Toolchains: arm
     - Location: enter the parent location where to import the Zephyr SDK (eg. `path/to/sdk/arm-zephyr-sdk-0.17.0`)
-* Click on "Import"
+* Click on the "Import" button
 
 ![Import SDK](/img/tutorials/arduino-uno-r4-wifi/zw_import_sdk.gif)
 
@@ -53,7 +53,7 @@ Import a minimal west workspace for NXP.
 After the **Workspace** is download and installed, it is listed in the **WEST WORKSPACES** view.
 
 ## Create a new blinky project
-The environment set up complete. We are now going to create a `blinky` project for the Arduino Uno R4 WiFi board.
+Now we are going to create a `blinky` project for the Arduino Uno R4 WiFi board.
 
 * Click on "Create New Application"
 * Select the **West Workspace** previously init
@@ -97,8 +97,7 @@ If it is the first time you debug an application for the board with pyOCD on Zep
 
 ## Restoring Arduino Bootloader
 
-If you corrupt the Arduino bootloader, you can restore it with the following command.
-
+If you accidentally corrupt the Arduino bootloader, you can recover it with the following command:
 ```
 wget https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/main/bootloaders/UNO_R4/dfu_wifi.hex
 pyocd flash -e sector -a 0x0 -t r7fa4m1ab dfu_wifi.hex
