@@ -18,9 +18,9 @@ Follow the general [Installation Guide](/docs/documentation/installation) to set
 
 ---
 
-## Import a SDK
+## Import an SDK
 
-Import a minimal Zephyr SDK suitable for ARM targets:
+Import an minimal Zephyr SDK suitable for ARM targets:
 
 * Click on **"Import Toolchain"** or **"New Toolchain"**
 * Fill out the fields:
