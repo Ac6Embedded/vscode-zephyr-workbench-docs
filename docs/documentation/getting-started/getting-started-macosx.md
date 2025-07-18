@@ -2,9 +2,9 @@
 sidebar_position: 4
 ---
 
-# Getting Started on macOS (x86 and Aarch64)
+# Getting Started on macOS (Aarch64)
 
-This section is a tutorial to guide to you the Zephyr Workbench usage on macOS (x86 or Aarch64) and shows
+This section is a tutorial to guide to you the Zephyr Workbench usage on macOS (Aarch64) and shows
 you the steps to follow to create your first "hello_world" application for the STM32F4_DISCOVERY board 
 from the official Zephyr sources.
 
