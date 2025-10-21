@@ -29,6 +29,81 @@ This issue typically occurs because both extensions attempt to manage CMake buil
   - `CMakeCache.txt`
 
 ---
+## PowerShell Script Execution Disabled
+
+When running Zephyr Workbench import workspace or build, you may encounter the following error message:
+
+```
+. : File C:\Users\MyUser\.zinstaller\env.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:3
++ . $env:VSCODE_PORTABLE\.zinstaller\env.ps1 > $null 2>&1 ; west update
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+west : The term 'west' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:59
++ . $env:VSCODE_PORTABLE\.zinstaller\env.ps1 > $null 2>&1 ; west update
++                                                           ~~~~
+    + CategoryInfo          : ObjectNotFound: (west:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+```
+
+This happens because **PowerShell script execution is disabled** on the system by the current execution policy.  
+As a result, the environment setup script (`env.ps1`) cannot run, preventing `west` and other Zephyr tools from being initialized.
+
+### Workarounds
+
+#### Option 1 - Enable script execution for your user
+1. Open **PowerShell** (you do not need administrator rights).  
+2. Run the following command:
+   ```powershell
+   Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+   ```
+3. Confirm the change by typing `Y` and pressing **Enter**.  
+4. Restart Visual Studio Code and try again.
+
+This allows locally created scripts (like `env.ps1`) to run while keeping protection for downloaded scripts.
+
+#### Option 2 - Use Git Bash as the default terminal in VS Code
+As an alternative to PowerShell, you can configure **Git Bash** as the default integrated terminal in VS Code.  
+This avoids PowerShell execution policy restrictions entirely.
+
+Add the following configuration to your VS Code **`settings.json`** file:
+
+```json
+"terminal.integrated.profiles.windows": {
+    "Git Bash": {
+        "path": "C:\\Users\\xxxMyUserxxx\\.zinstaller\\tools\\git\\bin\\bash.exe",
+        "args": ["--login", "-i"]
+    }
+},
+"terminal.integrated.defaultProfile.windows": "Git Bash"
+```
+Default Location of **`settings.json`**: `%APPDATA%\Code\User\settings.json`
+Replace `xxxMyUserxxx` with your actual Windows username.  
+After saving the configuration, it will now start in **Git Bash** instead of PowerShell.
+Note: this feature is still under development, expect some features to not work perfectly
+
+#### Option 3 - Enable script execution for all users
+If you have administrative rights and want to allow script execution system-wide:
+```powershell
+Set-ExecutionPolicy -Scope LocalMachine RemoteSigned
+```
+Then restart Visual Studio Code and verify by running:
+```powershell
+Get-ExecutionPolicy -List
+```
+The **LocalMachine** scope should show `RemoteSigned`.
+
+---
+
+### Additional Notes
+- The default PowerShell policy is **Restricted**, which prevents all scripts from running.  
+- `RemoteSigned` is the recommended setting for development systems.  
+- If your environment is managed by IT, group policies may override these settings — contact your administrator if changes do not take effect.
+
+---
 
 ## PowerShell 7 as Default Terminal
 
@@ -57,3 +132,37 @@ Add the runner to the global PATH
    - Ensure the folder containing the runner executable (e.g `openocd.exe` on Windows, `openocd` on Linux/macOS) is in your PATH.  
 
 ---
+## Slow Builds - Exclude Workspace from Antivirus
+
+If your Zephyr builds are very slow, real-time antivirus scanning is a common culprit.  
+Make sure your **workspace folder** and the **application folders** used by Zephyr Workbench are excluded from Windows Defender (Microsoft Defender) real-time scanning.
+
+> ⚠️ Only exclude folders you trust. Excluding untrusted folders creates a security risk.
+
+### 1. Open Windows Security
+- Press **Start** (Windows key)  
+- Type **Windows Security**  
+- Click the **Windows Security** app (blue shield icon)
+
+### 2. Go to Virus & threat protection
+- In the left menu (or main page), click **Virus & threat protection**
+
+### 3. Open protection settings
+- Scroll down to **Virus & threat protection settings**  
+- Click the small blue link: **Manage settings**
+
+### 4. Find the Exclusions section
+- Scroll down until you see **Exclusions**  
+- Click **Add or remove exclusions**  
+  - This opens the page where you can see existing exclusions (if any).
+
+### 5. Add a new exclusion
+- Click the **+ Add an exclusion** button  
+- Choose **Folder**  
+- A file browser opens — now you can navigate to your **Zephyr workspace** and your **application folder**.  
+- Select the folder and click **Select Folder**
+
+### 6. Confirm
+- You’ll see the folder added to the list of exclusions immediately.
+
+After adding the exclusions, rebuild your project - build times should be noticeably faster.
