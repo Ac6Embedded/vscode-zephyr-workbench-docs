@@ -75,10 +75,9 @@ What to expect
 ---
 ## Known Limitations / TODOs
 
-- Vendor module detection is temporary and hard-coded (only triggered for ST board paths). A future version should parse `west.yml` and each `zephyr/module.yml` to auto-discover `dts_root` entries.
+- Vendor module detection is hard-coded. A future version should parse `west.yml` and each `zephyr/module.yml` to auto-discover `dts_root` entries.
 - `.dtsi` files are intentionally skipped; the server relies on their parent `.dts` context.
-- Error handling is intentionally minimal to avoid noisy popups; see the extension output for details under `[ZW][DTS]` logs.
-
+- For custom DTS-LSP configuration, you can always configure it manually inside `settings.json` as mentioned in [usage guide](https://github.com/kylebonnici/dts-lsp?tab=readme-ov-file#usage).
 ---
 
 ## Troubleshooting
