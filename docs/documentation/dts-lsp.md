@@ -3,13 +3,13 @@ sidebar_position: 12
 ---
 # DTS LSP Integration
 
-This page explains how Zephyr Workbench integrates with the DeviceTree Language Server (DTS‑LSP), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
+This page explains how Zephyr Workbench integrates with the DeviceTree Language Server by Kyle Bonnici([DTS-LSP](https://github.com/kylebonnici/dts-lsp)), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
 
 ---
 
 ## Overview
 
-- Provides on‑the‑fly DTS language features (go‑to, hover, diagnostics, formatting) by talking to the external `dts-lsp` VS Code extension.
+- Provides on-the-fly DTS language features (go-to, hover, diagnostics, formatting) by talking to the external `dts-lsp` VS Code extension.
 - Automatically creates and selects DTS contexts based on the file you open:
   - Application overlays (`.overlay`) use the app build directory’s `build_info.yml` to derive include paths, bindings, the main `dtsFile`, overlays, and compile commands.
   - Workspace DeviceTree files (`.dts` in the Zephyr tree) use the Zephyr kernel tree to derive include and bindings paths.
@@ -75,7 +75,7 @@ What to expect
 ---
 ## Known Limitations / TODOs
 
-- Vendor module detection is temporary and hard‑coded (only triggered for ST board paths). A future version should parse `west.yml` and each `zephyr/module.yml` to auto‑discover `dts_root` entries.
+- Vendor module detection is temporary and hard-coded (only triggered for ST board paths). A future version should parse `west.yml` and each `zephyr/module.yml` to auto-discover `dts_root` entries.
 - `.dtsi` files are intentionally skipped; the server relies on their parent `.dts` context.
 - Error handling is intentionally minimal to avoid noisy popups; see the extension output for details under `[ZW][DTS]` logs.
 
@@ -83,7 +83,7 @@ What to expect
 
 ## Troubleshooting
 
-- Ensure the `KyleMicallefBonnici.dts-lsp` extension is installed and enabled.
+- Ensure the `KyleMicallefBonnici.dts-lsp` [extension](https://marketplace.visualstudio.com/items?itemName=KyleMicallefBonnici.dts-lsp) is installed and enabled.
 - If overlays don’t resolve correctly, run a build to ensure `build_info.yml` and `compile_commands.json` exist.
 - If contexts appear stale after changing `build_info.yml`, the integration removes and recreates the context automatically. If issues persist, close and reopen the file.
 - Restart VSCode
