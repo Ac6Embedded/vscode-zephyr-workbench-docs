@@ -12,7 +12,7 @@ const config = {
   tagline: 'A VS Code extension for Zephyr projects on all platforms',
   favicon: 'img/favicon.ico',
 
-  url: 'https://zephyr-workbench.com',
+  url: 'https://z-workbench.com',
   baseUrl: '/',
 
   // GitHub pages deployment config.
