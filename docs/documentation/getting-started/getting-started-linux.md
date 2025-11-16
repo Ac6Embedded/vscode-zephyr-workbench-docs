@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started on Linux
 
-This section is a tutorial to guide to you the Zephyr Workbench usage on Linux and shows
+This section is a tutorial to guide to you the Workbench for Zephyr usage on Linux and shows
 you the steps to follow to create your first "hello_world" application for the STM32F4_DISCOVERY board 
 from the official Zephyr sources.
 
