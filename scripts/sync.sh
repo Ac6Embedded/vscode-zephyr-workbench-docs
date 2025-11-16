@@ -60,6 +60,14 @@ git fetch origin
 local_commit=$(git rev-parse $git_branch)
 remote_commit=$(git rev-parse origin/$git_branch)
 
+# Temporarily stash local yarn.lock changes so they don't block pull
+stashed_yarn_lock=0
+if git status --porcelain yarn.lock | grep -q .; then
+  echo "Detected local changes in yarn.lock, stashing them temporarily for sync..."
+  git stash push -m "sync.sh auto-stash yarn.lock" yarn.lock >/dev/null 2>&1 || true
+  stashed_yarn_lock=1
+fi
+
 # If commits diff, pull the latest commits then rebuild the sources
 if [[ "$local_commit" != "$remote_commit" ]]; then
   git pull origin $git_branch
@@ -72,3 +80,8 @@ if [[ "$local_commit" != "$remote_commit" ]]; then
   tar cf - build/ | ( cd $website_dir; tar -x --strip-components=1 -f - )
 fi
 
+# Restore yarn.lock changes if we stashed them
+if [[ "$stashed_yarn_lock" -eq 1 ]]; then
+  echo "Restoring previous yarn.lock changes from stash (if still applicable)..."
+  git stash pop >/dev/null 2>&1 || echo "Warning: could not automatically reapply yarn.lock changes."
+fi
