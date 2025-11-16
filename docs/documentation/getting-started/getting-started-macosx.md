@@ -8,6 +8,8 @@ This section is a tutorial to guide to you the Zephyr Workbench usage on macOS (
 you the steps to follow to create your first "hello_world" application for the STM32F4_DISCOVERY board 
 from the official Zephyr sources.
 
+If you prefer a video walkthrough, see the [Getting Started Video Tutorial](/documentation/getting-started/getting-started-video).
+
 ## Requirement
 
 On **macOS**, VS Code and its extension might be put in quarantine by default. If it is the case, exclude it

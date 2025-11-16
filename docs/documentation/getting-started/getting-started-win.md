@@ -7,6 +7,8 @@ sidebar_position: 3
 This section is a tutorial to guide to you the Zephyr Workbench usage on Windows and shows you the steps to follow 
 to create your first "hello_world" application for the STM32F4_DISCOVERY board from the official Zephyr sources.
 
+If you prefer a video walkthrough, see the [Getting Started Video Tutorial](/documentation/getting-started/getting-started-video).
+
 ## Setting Up the Zephyr environment
 
 ### Install Host Tools
