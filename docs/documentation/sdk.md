@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Toolchains
 
-The **Zephyr Software Development Kit (SDK)** provides toolchains for supported architectures. Zephyr Workbench allows you to:
+The **Zephyr Software Development Kit (SDK)** provides toolchains for supported architectures. Workbench for Zephyr allows you to:
 
 - Import full or minimal Zephyr SDKs
 - Register a locally installed SDK
@@ -38,7 +38,7 @@ You can choose from the following source locations when adding a toolchain:
 
 ## IAR ARM Toolchain Support
 
-Zephyr Workbench supports importing the **IAR ARM Toolchain**, which requires additional input fields:
+Workbench for Zephyr supports importing the **IAR ARM Toolchain**, which requires additional input fields:
 
 - **Zephyr SDK Path**: A path to an already installed Zephyr SDK on your host system.
 - **Token**: A license token required for IAR tool usage.
@@ -105,5 +105,5 @@ When an **IAR ARM Toolchain** is expanded in the list, the **associated Zephyr S
 ---
 
 :::note
-Toolchains are shared across all applications and workspaces within Zephyr Workbench.
+Toolchains are shared across all applications and workspaces within Workbench for Zephyr.
 :::

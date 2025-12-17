@@ -3,8 +3,8 @@ sidebar_position: 30
 ---
 # Views
 
-## Zephyr Workbench Shortcuts
-This panel gives your shortcut to the most used features of Zephyr Workbench
+## Workbench for Zephyr Shortcuts
+This panel gives your shortcut to the most used features of Workbench for Zephyr
 
 - New West Workspace
 - New Application
@@ -51,7 +51,7 @@ The actions on the west workspace are:
 
 
 ## Zephyr SDK
-This panel lists the SDK saved in Zephyr Workbench settings
+This panel lists the SDK saved in Workbench for Zephyr settings
 
 The actions on this panel are:
 - Add Zephyr SDK
@@ -60,7 +60,7 @@ The actions on this panel are:
 
 ## Host Tools
 Hub panel to manage external tools
-- Install/Reinstall Host Tools (install the required tools to use Zephyr Workbench)
+- Install/Reinstall Host Tools (install the required tools to use Workbench for Zephyr)
 - Reinstall Virtual Environment (reset the initial venv)
 - Verify Host Tools (check the status and version of installed tools)
 - Install Debug Tools (check the status and get the link to install external debug tools)

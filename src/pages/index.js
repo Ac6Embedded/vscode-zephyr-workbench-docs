@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
-      description="Online documentation of VSCode extension Zephyr Workbench developed by Ac6">
+      description="Online documentation of VSCode extension Workbench for Zephyr developed by Ac6">
       <HomepageHeader />
       <main>
         <HomepagePicture />

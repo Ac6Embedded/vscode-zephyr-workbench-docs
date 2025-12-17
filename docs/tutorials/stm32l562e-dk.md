@@ -96,7 +96,7 @@ The STM32L562E-DK includes an ST-LINK/V3E probe supporting:
 * **J-Link** (external, optional)
 
 :::info
-Zephyr Workbench includes pyOCD by default. OpenOCD is supported but may require separate installation.
+Workbench for Zephyr includes pyOCD by default. OpenOCD is supported but may require separate installation.
 :::
 :::warning
 Make sure to install the [ST-LINK USB drivers](https://www.st.com/en/development-tools/st-link-v2.html) to enable communication with the debugger.

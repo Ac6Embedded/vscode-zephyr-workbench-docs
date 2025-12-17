@@ -78,7 +78,7 @@ To build the project, right-click on it, then select "Build". The build output i
 Arduino UNO R4 WiFi has a built-in debug adapter that you can use for flashing and debugging. It is compatible the following runners:
 * pyOCD
 
-pyOCD is provided with Zephyr Workbench, unlike other runners. Zephyr Workbench can automatically detect the executable. Otherwise, either edit the PATH environment variable to
+pyOCD is provided with Workbench for Zephyr, unlike other runners. Workbench for Zephyr can automatically detect the executable. Otherwise, either edit the PATH environment variable to
 with the path to the executable or inform the runner path in the **Debug Manager**.
 
 Connect your machine with the Arduino Uno R4 WiFi on the USB-C connector.
@@ -93,7 +93,7 @@ Connect your machine with the Arduino Uno R4 WiFi on the USB-C connector.
 * Click on "Apply" to save the debug configuration.
 * Click on "Debug" to start the debug session.
 
-If it is the first time you debug an application for the board with pyOCD on Zephyr Workbench, the start debug process might takes longer to check if pyOCD supports the "r7fa4m1ab" target or needs to install it. This step is done automatically.
+If it is the first time you debug an application for the board with pyOCD on Workbench for Zephyr, the start debug process might takes longer to check if pyOCD supports the "r7fa4m1ab" target or needs to install it. This step is done automatically.
 
 ## Restoring Arduino Bootloader
 

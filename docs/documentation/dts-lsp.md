@@ -3,7 +3,7 @@ sidebar_position: 12
 ---
 # DTS LSP Integration
 
-This page explains how Zephyr Workbench integrates with the DeviceTree Language Server by Kyle Bonnici([DTS-LSP](https://github.com/kylebonnici/dts-lsp)), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
+This page explains how Workbench for Zephyr integrates with the DeviceTree Language Server by Kyle Bonnici([DTS-LSP](https://github.com/kylebonnici/dts-lsp)), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
 
 ---
 

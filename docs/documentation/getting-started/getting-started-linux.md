@@ -13,7 +13,7 @@ If you prefer a video walkthrough, see the [Getting Started Video Tutorial](./ge
 ## Setting Up the Zephyr environment
 
 ### Install Host Tools
-1. Click on "Zephyr Workbench" button on the VSCode activity bar
+1. Click on "Workbench for Zephyr" button on the VSCode activity bar
 2. Click on "Install Host Tools" to download and to install the native tools locally (takes ~5mins).
 
 :::warning
@@ -65,7 +65,7 @@ is shown.
 ## Creating and building the project
 
 ### Create a new application project 
-On Zephyr Workbench, new project are based on samples from Zephyr sources.
+On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Click on "Create New Application"
    * Select the **West Workspace** to attach to
    * Select the **Zephyr SDK** to use
@@ -84,7 +84,7 @@ Edit your project if needed, to access to the project sources, go back to the "E
 ![Edit source code](/img/zw/getting-started/linux/zw_6_app-edit.png)
 
 :::tip
-To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
+To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
 :::
 
 ### Build the application

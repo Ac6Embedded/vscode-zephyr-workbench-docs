@@ -9,7 +9,7 @@ const FeatureList = [
     to: 'https://marketplace.visualstudio.com/items?itemName=Ac6.zephyr-workbench',
     description: (
       <>
-        Download the Zephyr Workbench VSCode Extension from the Marketplace. The extension is
+        Download the Workbench for Zephyr VSCode Extension from the Marketplace. The extension is
         compatible on Windows, Linux x86 and Mac OSX aarch64.
       </>
     ),

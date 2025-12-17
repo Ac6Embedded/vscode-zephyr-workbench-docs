@@ -3,7 +3,7 @@ sidebar_position: 11
 ---
 # Custom Boards, Devicetree and SOC Definitions
 
-Zephyr Workbench supports the definitions of your custom boards, devicetree or soc. The list of boards is return by the `west boards` command.
+Workbench for Zephyr supports the definitions of your custom boards, devicetree or soc. The list of boards is return by the `west boards` command.
 
 The custom definitions can be whether on the:
 - **West workspace**: The definition directories are under the workspace root directory or they are set into the **ARCH_ROOT**, **SOC_ROOT** **BOARD_ROOT** or **DTC_ROOT** variables.

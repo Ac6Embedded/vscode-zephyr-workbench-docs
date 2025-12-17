@@ -20,7 +20,7 @@ The creation process is based on sample provided by Zephyr.
 9. Click on "Import" 
 
 ## Import Application
-If you already have an application sources, you can import and configure it for Zephyr Workbench
+If you already have an application sources, you can import and configure it for Workbench for Zephyr
 
 1. Click on "Import Application" button
 ![Import Application](/img/zw/applications/zw_app_import.png)

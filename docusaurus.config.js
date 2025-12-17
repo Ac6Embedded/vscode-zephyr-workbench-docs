@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Zephyr Workbench',
+  title: 'Workbench for Zephyr',
   tagline: 'A VS Code extension for Zephyr projects on all platforms',
   favicon: 'img/favicon.ico',
 
@@ -54,7 +54,7 @@ const config = {
         {name: 'keywords', content: 'Zephyr Workbench, Zephyr, Development, VS Code for Zephyr'},
       ],
       navbar: {
-        title: 'Zephyr Workbench',
+        title: 'Workbench for Zephyr',
         logo: {
           alt: 'Zephyr Workbench Logo',
           src: 'img/logo.svg',

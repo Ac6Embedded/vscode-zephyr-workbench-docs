@@ -86,8 +86,8 @@ The development board has a MCU-Link CMSIS-DAP Onboard Debug Probe. It is compat
 * J-Link - https://www.segger.com/downloads/jlink/
 * pyOCD
 
-pyOCD is provided with Zephyr Workbench, unlike LinkServer or J-Link. If LinkServer or J-Link are installed into their default
-destination, Zephyr Workbench can automatically detect the executable. Otherwise, either edit the PATH environment variable to
+pyOCD is provided with Workbench for Zephyr, unlike LinkServer or J-Link. If LinkServer or J-Link are installed into their default
+destination, Workbench for Zephyr can automatically detect the executable. Otherwise, either edit the PATH environment variable to
 with the path to the executable or inform the runner path in the **Debug Manager**.
 
 Connect your machine with the FRDM-MCXN947 on the USB-C MCU Link port.

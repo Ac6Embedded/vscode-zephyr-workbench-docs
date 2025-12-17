@@ -1,6 +1,6 @@
 # Website
 
-This repository contains the source for the online documentation of Zephyr Workbench.
+This repository contains the source for the online documentation of Workbench for Zephyr.
 The website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation

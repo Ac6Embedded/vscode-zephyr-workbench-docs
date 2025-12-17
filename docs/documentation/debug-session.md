@@ -30,7 +30,7 @@ For application that where not built, it might take several seconds before defau
 - Enter the CMSIS-SVD file of your target (It is the XML-based file describing your device processor and peripherals).
 
 #### GDB
-Zephyr Workbench use cross GNU Debugger(GDB) as debugger, configure it if needed.
+Workbench for Zephyr use cross GNU Debugger(GDB) as debugger, configure it if needed.
 - Enter the path to the cross-gdb (by default, it selects the GDB from the Zephyr SDK).
 - Enter the TCP/IP address of the debug connection.
 - Enter the TCP/IP port of the debug connection.
@@ -51,7 +51,7 @@ west debug --runner <runner_name> -H
 ```
 :::
 
-Click on "Apply" to save the debug session. The newly debug configuration is named "Zephyr Workbench Debug \<application_name\>"
+Click on "Apply" to save the debug session. The newly debug configuration is named "Workbench for Zephyr Debug \<application_name\>"
 
 :::note
 If `pyocd` is selected, the debug starting process can take some time to update the support of your target.

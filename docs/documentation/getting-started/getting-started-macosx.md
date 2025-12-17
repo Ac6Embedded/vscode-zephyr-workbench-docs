@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Getting Started on macOS (Aarch64)
 
-This section is a tutorial to guide to you the Zephyr Workbench usage on macOS (Aarch64) and shows
+This section is a tutorial to guide to you the Workbench for Zephyr usage on macOS (Aarch64) and shows
 you the steps to follow to create your first "hello_world" application for the STM32F4_DISCOVERY board 
 from the official Zephyr sources.
 
@@ -19,7 +19,7 @@ from quarantine with the command:
 xattr -dr com.apple.quarantine Visual\ Studio\ Code.app
 ```
 
-Zephyr Workbench on macOS also required **Homebrew**. Homebrew is an open-source package manager the 
+Workbench for Zephyr on macOS also required **Homebrew**. Homebrew is an open-source package manager the 
 simply software installation on macOS (or Linux).
 
 To install Homebrew, run the following command:
@@ -33,7 +33,7 @@ For more information about Homebrew, please refer to the [documentation](https:/
 ## Setting Up the Zephyr environment
 
 ### Install Host Tools
-1. Click on "Zephyr Workbench" button on the VSCode activity bar
+1. Click on "Workbench for Zephyr" button on the VSCode activity bar
 2. Click on "Install Host Tools" to download and to install the native tools locally (takes ~5mins).
 
 :::info
@@ -82,7 +82,7 @@ After installing the tools, it also generates a python virtual environment with 
 ## Creating and building the project
 
 ### Create a new application project 
-On Zephyr Workbench, new project are based on samples from Zephyr sources.
+On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Click on "Create New Application"
    * Select the **West Workspace** to attach to
    * Select the **Zephyr SDK** to use
@@ -102,7 +102,7 @@ Edit your project if needed, to access to the project sources, go back to the "E
 
 
 :::tip
-To switch from "Zephyr Workbench" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
+To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
 :::
 
 ### Build the application

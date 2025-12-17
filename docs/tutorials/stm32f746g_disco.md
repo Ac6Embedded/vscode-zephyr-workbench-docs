@@ -92,7 +92,7 @@ The STM32F746G-DISCO includes an ST-LINK/V2-1 programmer/debugger that supports:
 * **J-Link** (if used externally)
 
 :::note
-Zephyr Workbench includes pyOCD, but OpenOCD is often preferred for STM32 targets.
+Workbench for Zephyr includes pyOCD, but OpenOCD is often preferred for STM32 targets.
 :::
 :::info
 Make sure to install the [ST-LINK USB drivers](https://www.st.com/en/development-tools/st-link-v2.html) to enable communication with the debugger.

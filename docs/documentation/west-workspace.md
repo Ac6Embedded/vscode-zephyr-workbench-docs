@@ -16,7 +16,7 @@ To import a new "West Workspace", click on the "New West Workspace" button or th
 ### Source location:
 
 - **Minimal from template**:
-Import the west workspace from internal templates provided by Zephyr Workbench.
+Import the west workspace from internal templates provided by Workbench for Zephyr.
 The sources are fetched from repositories.
 
   * Most of the time, you won't need to change the Path value. It indicated the parent URL where every Zephyr related repositories are.
@@ -46,7 +46,7 @@ If you might experience issue while importing from  **Repository** with python e
 the case happens when VS Code locks the working directory.
 
 The workaround is to close VS Code, init the west workspace manually using `west init -m <zephyr_repo_url> --mr <version> <dest_dir>` 
-then import the initialize directory into Zephyr Workbench.
+then import the initialize directory into Workbench for Zephyr.
 :::
 
 ## Manage West Workspace
