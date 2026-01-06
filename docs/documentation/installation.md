@@ -26,7 +26,7 @@ Zephyr requires you to install some host dependencies. Workbench for Zephyr prov
 
 To complete the host tools installation, go to the Workbench for Zephyr tab then click on "Install Host Tools". This process takes several minutes to install some tools locally and some on your system.
 
-![Install host tools](/img/zw/installation/zw_host_tools.png)
+![Install host tools](/img/update/install-host-tools.png)
 
 | Windows              | Linux               | MacOSX (using brew)  |
 | -------------------- | ------------------- | -------------------- |
