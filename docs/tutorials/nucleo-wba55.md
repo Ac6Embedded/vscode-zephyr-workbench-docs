@@ -81,7 +81,7 @@ To build the project, right-click on it, then select "Build". The build output i
 ST Nucleo WBA55CG has a built-in ST-Link/V3 debug adapter that you can use for flashing and debugging. It is compatible the following runners:
 * OpenOCD
 
-OpenOCD is provided with Workbench for Zephyr, but not installed by default. Go to the **Install Debug Tools** page to install the 
+OpenOCD is provided with Workbench for Zephyr, but not installed by default. Go to the **Install Runners** page to install the 
 STM32 Debug Pack, it provides you OpenOCD and the drivers/tools to support STM32 target debug.
 
 Connect your machine with the ST Nucleo WBA55CG on the USB-C connector.

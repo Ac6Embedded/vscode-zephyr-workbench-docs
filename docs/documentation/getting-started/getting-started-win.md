@@ -26,39 +26,40 @@ If you prefer a video walkthrough, see the [Getting Started Video Tutorial](./ge
       - git
    * It generates a python virtual environment and an environment script
 
-![Install Host Tools](/img/zw/getting-started/win/zw_1_install-host-tools.png)
+![Install Host Tools](/img/update/install-host-tools.png)
 
 :::warning
 To execute tools, Windows asks for permission to be granted.
 :::
 
 ### Import a Zephyr SDK
-   * Click on "Import SDK" button
+   * Click on "New Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:
         - Source location: Official SDK
         - SDK Type: Minimal
-        - Version: v0.16.8
-        - Toolchains: aarch64 arm
+        - Version: v0.17.4
+        - Toolchains: aarch64, arm, riscv64, xtensa-espressif_esp32s3
         - Location: enter the parent location where to import the Zephyr SDK
    * Click on "Import"   
 
-![Import SDK](/img/zw/getting-started/win/zw_3_sdk-import.png)
+![Import SDK](/img/update/win-toolchain.png)
 
 
 ### Initialize a West Workspace
    * Click on "Initialize workspace" button
    * Open the newly opened page, enter information about your west workspace instance.
       - For example:
-        - Source location: Minimal from template
+        - Source location: From template
         - Path: https://github.com/zephyrproject
+        - Minimal: marked as check
         - Template: STM32
-        - Branch: v3.7.0
+        - Branch: v4.3.0
         - Location: enter the directory where the west workspace will be imported (the directory name will serve as workspace name)
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
 
-![Import West Workspace](/img/zw/getting-started/win/zw_4_west-workspace-init.png)
+![Import West Workspace](/img/update/create-wws.png)
 
 
 ## Creating and building the project
@@ -69,18 +70,18 @@ On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Select the **West Workspace** to attach to
    * Select the **Zephyr SDK** to use
    * Select the target **Board** (eg. ST STM32F4 Discovery)
-   * Select the **Sample** project as based (eg. blinky)
+   * Select the **Sample** project as based (eg. hello_world)
    * Enter the project name
    * Enter the project location
    * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 
-![Create New Project](/img/zw/getting-started/win/zw_5_app-create.png)
+![Create New Project](/img/update/create-app.png)
 
 
 ### Edit your code
 Edit your project if needed, to access to the project sources, go back to the "Explorer" panel
 
-<!--![Edit source code](/img/zw/getting-started/win/zw_6_app-edit.png)-->
+![Edit source code](/img/update/edit-code.png)
 
 
 :::tip
@@ -92,18 +93,22 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-![Build Application](/img/zw/getting-started/win/zw_7_app-build.png)
+![Build Application](/img/update/win-build.png)
 
 ## Debugging the application
-### Install Debug tools
-   * Click on "Install Debug Tools" to open the debug tools manager
-   * Click on the Install icon of **OpenOCD** and **STM32CubeProgrammer**
+### Install Runners
+   * Click on "Install Runners" to open the runners manager
+   * Click on the Install icon of **STM32**
 
-![Install Debug Tools](/img/zw/getting-started/win/zw_8_debug-tools-install.png)
+![Install Runners](/img/update/win-install-runners.png)
 
 :::info
 For STM32 targets with an integrated ST-Link on Window, the USB driver for ST-LINK/V2, ST-LINK/V2-1 and STLINK-V3 boards is needed 
 for the debug. **STM32CubeProgrammer** installer provides this driver.
+:::
+
+:::info
+In **Extra Runners**, you can add a custom runner if you prefer.
 :::
 
 ### Configure the debug session
@@ -119,7 +124,7 @@ for the debug. **STM32CubeProgrammer** installer provides this driver.
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-![Edit Debug Configuration](/img/zw/getting-started/win/zw_9_debug-manager.png)
+![Edit Debug Configuration](/img/update/win-debug-manager.png)
 
 ### Debug the application
 

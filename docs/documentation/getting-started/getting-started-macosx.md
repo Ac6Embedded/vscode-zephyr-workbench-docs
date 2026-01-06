@@ -51,15 +51,15 @@ After installing the tools, it also generates a python virtual environment with 
 ![Install Host Tools](/img/zw/getting-started/darwin/zw_1_install-host-tools.png)
 
 ### Import a Zephyr SDK
-   * Click on "Import SDK" button
+   * Click on "New Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:
         - Source location: Official SDK
         - SDK Type: Minimal
-        - Version: v0.16.8
-        - Toolchains: aarch64 arm
+        - Version: v0.17.4
+        - Toolchains: aarch64, arm, riscv64, xtensa-espressif_esp32s3
         - Location: enter the parent location where to import the Zephyr SDK
-   * Click on "Import"   
+   * Click on "Import" 
 
 ![Import SDK](/img/zw/getting-started/darwin/zw_3_sdk-import.png)
 
@@ -113,11 +113,11 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
 ![Build Application](/img/zw/getting-started/darwin/zw_7_app-build.png)
 
 ## Debugging the application
-### Install Debug tools
-   * Click on "Install Debug Tools" to open the debug tools manager
+### Install Runners
+   * Click on "Install Runners" to open the runners manager
    * Click on the Install icon of **OpenOCD**
 
-![Install Debug Tools](/img/zw/getting-started/darwin/zw_8_debug-tools-install.png)
+![Install Runners](/img/zw/getting-started/darwin/zw_8_debug-tools-install.png)
 
 ### Configure the debug session
    * Click on "Debug Manager" to open a debug configuration form

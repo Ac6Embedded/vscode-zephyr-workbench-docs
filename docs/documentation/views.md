@@ -63,7 +63,7 @@ Hub panel to manage external tools
 - Install/Reinstall Host Tools (install the required tools to use Workbench for Zephyr)
 - Reinstall Virtual Environment (reset the initial venv)
 - Verify Host Tools (check the status and version of installed tools)
-- Install Debug Tools (check the status and get the link to install external debug tools)
+- Install Runners (check the status and get the link to install external runners/tools)
 - Debug Manager (configure the debug session)
 
 ## Other Resources
