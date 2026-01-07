@@ -33,7 +33,7 @@ is shown.
 
 ![Install Host Tools](/img/update/install-host-tools.png)
 
-### Import a Zephyr SDK
+### Import Toolchain
    * Click on "New Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:

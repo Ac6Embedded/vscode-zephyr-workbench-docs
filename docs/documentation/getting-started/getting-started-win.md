@@ -32,7 +32,7 @@ If you prefer a video walkthrough, see the [Getting Started Video Tutorial](./ge
 To execute tools, Windows asks for permission to be granted.
 :::
 
-### Import a Zephyr SDK
+### Import Toolchain
    * Click on "New Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:
