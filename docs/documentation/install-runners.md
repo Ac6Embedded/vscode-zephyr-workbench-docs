@@ -12,7 +12,7 @@ are supported, please refer to the manufacturer user manual.
 
 Some targets requires multiple tools for the debug. The tools are grouped in pack and can be installed in one click.
 
-### Tools
+### Runners
 
 For some tools, you can installed them by click on the install button.
 Other ones requires you to register to the editor website and to accept license. Click on the URL icon to be redirected the tool download page then install it manually.
@@ -41,3 +41,7 @@ not supported, Workbench for Zephyr install it on the first time the debug is la
 :::note 
 Uninstalling tools is not supported yet.
 :::
+
+### Extra Runners
+
+Extra runners allow you to customize a specific tool that is not included in the standard options. You can add your own runner to meet those needs.
