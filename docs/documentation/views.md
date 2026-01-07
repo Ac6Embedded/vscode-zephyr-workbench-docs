@@ -6,9 +6,9 @@ sidebar_position: 30
 ## Workbench for Zephyr Shortcuts
 This panel gives your shortcut to the most used features of Workbench for Zephyr
 
-- New West Workspace
 - New Application
-- New Zephyr SDK
+- New West Workspace
+- New Toolchain
 - Debug Manager
 
 ## Applications
@@ -50,21 +50,24 @@ The actions on the west workspace are:
 - Open Terminal (open a local terminal for the west workspace)
 
 
-## Zephyr SDK
-This panel lists the SDK saved in Workbench for Zephyr settings
+## Toolchains
+This panel lists the Toolchains saved in Workbench for Zephyr settings
 
 The actions on this panel are:
-- Add Zephyr SDK
-- Remove Zephyr SDK (remove from the list without deleting the files)
-- Delete from disk (fully delete the SDK folder from the system (irreversible))
+- Add Toolchain
+- Remove Toolchain (remove from the list without deleting the files)
+- Delete from disk (fully delete the Toolchain folder from the system (irreversible))
 
 ## Host Tools
 Hub panel to manage external tools
-- Install/Reinstall Host Tools (install the required tools to use Workbench for Zephyr)
-- Reinstall Virtual Environment (reset the initial venv)
-- Verify Host Tools (check the status and version of installed tools)
-- Install Runners (check the status and get the link to install external runners/tools)
-- Debug Manager (configure the debug session)
+  - Host Tools Manager
+    - Install/Reinstall Host Tools (install the required tools to use Workbench for Zephyr)
+    - Reinstall Virtual Environment (reset the initial venv)
+    - Verify Host Tools (check the status and version of installed tools)
+    - Extra Tools (add a custom tool)
+
+  - Install Runners (check the status and get the link to install external runners/tools)
+    - Extra Runners (add a custom runner)
 
 ## Other Resources
 Several links to Zephyr documentation and other useful resources
