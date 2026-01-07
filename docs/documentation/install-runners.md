@@ -6,7 +6,7 @@ sidebar_position: 9
 This page list the packs and the external runners/tools that can be installed to support remote debug for your target. Not every target board 
 are supported, please refer to the manufacturer user manual.
 
-![Install Runners](/img/update/win-install-runners.png)
+![Install Runners](/img/update/install-runners.png)
 
 ### Packs
 

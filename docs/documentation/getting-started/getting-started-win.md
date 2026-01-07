@@ -43,7 +43,7 @@ To execute tools, Windows asks for permission to be granted.
         - Location: enter the parent location where to import the Zephyr SDK
    * Click on "Import"   
 
-![Import SDK](/img/update/win-toolchain.png)
+![Import SDK](/img/update/toolchain.png)
 
 
 ### Initialize a West Workspace
@@ -93,14 +93,14 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-![Build Application](/img/update/win-build.png)
+![Build Application](/img/update/build.png)
 
 ## Debugging the application
 ### Install Runners
    * Click on "Install Runners" to open the runners manager
    * Click on the Install icon of **STM32**
 
-![Install Runners](/img/update/win-install-runners.png)
+![Install Runners](/img/update/install-runners.png)
 
 :::info
 For STM32 targets with an integrated ST-Link on Window, the USB driver for ST-LINK/V2, ST-LINK/V2-1 and STLINK-V3 boards is needed 
@@ -124,7 +124,7 @@ In **Extra Runners**, you can add a custom runner if you prefer.
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-![Edit Debug Configuration](/img/update/win-debug-manager.png)
+![Edit Debug Configuration](/img/update/debug-manager.png)
 
 ### Debug the application
 

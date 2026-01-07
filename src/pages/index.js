@@ -31,7 +31,7 @@ function HomepageHeader() {
 function HomepagePicture() {
   return (
     <section>
-      <img class="homePicture" src="/img/update/image-one.png"></img>
+      <img class="homePicture" src="/img/update/wfz-overall.png"></img>
     </section>
   );
 }
