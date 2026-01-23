@@ -1,0 +1,9 @@
+{
+  "label": "Static Code Analysis",
+  "position": 7,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Run Static Code Analysis tools"
+  }
+}

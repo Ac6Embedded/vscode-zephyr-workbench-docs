@@ -22,7 +22,7 @@ libsdl2-dev libmagic1*) on your system using the package manager. The **ROOT** p
 installation. If the listed tools are already installed on your system, just cancel when the password prompt
 is shown.
 
-![Root Prompt](/img/update/linux/auth-linux.png)
+![Root Prompt](/img/update/auth-linux.png)
 :::
 
    * This process downloads and installs portable version of tools required in the Zephyr buildsystem such as:
@@ -31,7 +31,7 @@ is shown.
       - ninja
    * It generates a python virtual environment and an environment script
 
-![Install Host Tools](/img/update/linux/install-host-tools.png)
+![Install Host Tools](/img/update/install-host-tools.png)
 
 ### Import Toolchain
    * Click on "New Toolchain" button
@@ -44,7 +44,7 @@ is shown.
         - Location: enter the parent location where to import the Zephyr SDK
    * Click on "Import" 
 
-![Import SDK](/img/update/linux/toolchain.png)
+![Import SDK](/img/update/toolchain.png)
 
 
 ### Initialize a West Workspace
@@ -60,7 +60,7 @@ is shown.
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
 
-![Import West Workspace](/img/update/linux/create-wws.png)
+![Import West Workspace](/img/update/create-wws.png)
 
 
 ## Creating and building the project
@@ -76,13 +76,13 @@ On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Enter the project location
    * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 
-![Create New Project](/img/update/linux/create-app.png)
+![Create New Project](/img/update/create-app.png)
 
 
 ### Edit your code
 Edit your project if needed, to access to the project sources, go back to the "Explorer" panel
 
-![Edit source code](/img/update/linux/edit-code.png)
+![Edit source code](/img/update/edit-code.png)
 
 :::tip
 To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
@@ -93,14 +93,14 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-![Build Application](/img/update/linux/build.png)
+![Build Application](/img/update/build.png)
 
 ## Debugging the application
 ### Install Runners
    * Click on "Install Runners" to open the runners manager
    * Click on the Install icon of **STM32**
 
-![Install Runners](/img/update/linux/install-runners.png)
+![Install Runners](/img/update/install-runners.png)
 
 :::info
 For STM32 targets with an integrated ST-Link on Linux, **STM32CubeProgrammer** provides the necessary udev rules for 
@@ -130,7 +130,7 @@ In **Extra Runners**, you can add a custom runner if you prefer.
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-![Edit Debug Configuration](/img/update/linux/debug-manager.png)
+![Edit Debug Configuration](/img/update/debug-manager.png)
 
 ### Debug the application
 

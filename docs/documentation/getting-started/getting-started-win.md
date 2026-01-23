@@ -26,7 +26,7 @@ If you prefer a video walkthrough, see the [Getting Started Video Tutorial](./ge
       - git
    * It generates a python virtual environment and an environment script
 
-![Install Host Tools](/img/update/install-host-tools.png)
+![Install Host Tools](/img/update/win/install-host-tools.png)
 
 :::warning
 To execute tools, Windows asks for permission to be granted.
@@ -43,7 +43,7 @@ To execute tools, Windows asks for permission to be granted.
         - Location: enter the parent location where to import the Zephyr SDK
    * Click on "Import"   
 
-![Import SDK](/img/update/toolchain.png)
+![Import SDK](/img/update/win/toolchain.png)
 
 
 ### Initialize a West Workspace
@@ -59,7 +59,7 @@ To execute tools, Windows asks for permission to be granted.
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
 
-![Import West Workspace](/img/update/create-wws.png)
+![Import West Workspace](/img/update/win/create-wws.png)
 
 
 ## Creating and building the project
@@ -75,13 +75,13 @@ On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Enter the project location
    * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 
-![Create New Project](/img/update/create-app.png)
+![Create New Project](/img/update/win/create-app.png)
 
 
 ### Edit your code
 Edit your project if needed, to access to the project sources, go back to the "Explorer" panel
 
-![Edit source code](/img/update/edit-code.png)
+![Edit source code](/img/update/win/edit-code.png)
 
 
 :::tip
@@ -93,14 +93,14 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-![Build Application](/img/update/build.png)
+![Build Application](/img/update/win/build.png)
 
 ## Debugging the application
 ### Install Runners
    * Click on "Install Runners" to open the runners manager
    * Click on the Install icon of **STM32**
 
-![Install Runners](/img/update/install-runners.png)
+![Install Runners](/img/update/win/install-runners.png)
 
 :::info
 For STM32 targets with an integrated ST-Link on Window, the USB driver for ST-LINK/V2, ST-LINK/V2-1 and STLINK-V3 boards is needed 
@@ -124,7 +124,7 @@ In **Extra Runners**, you can add a custom runner if you prefer.
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-![Edit Debug Configuration](/img/update/debug-manager.png)
+![Edit Debug Configuration](/img/update/win/debug-manager.png)
 
 ### Debug the application
 
