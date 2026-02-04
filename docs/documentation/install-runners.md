@@ -1,26 +1,24 @@
 ---
 sidebar_position: 9
 ---
-# Debug Tools
+# Install Runners
 
-## Install Debug Tools
-
-This page list the packs and the external debug tools that can be installed to support remote debug for your target. Not every target board 
+This page list the packs and the external runners/tools that can be installed to support remote debug for your target. Not every target board 
 are supported, please refer to the manufacturer user manual.
 
-![Debug tools](/img/zw/debug-tools/zw_install_debug_tools.png)
+![Install Runners](/img/update/install-runners.png)
 
 ### Packs
 
 Some targets requires multiple tools for the debug. The tools are grouped in pack and can be installed in one click.
 
-### Tools
+### Runners
 
 For some tools, you can installed them by click on the install button.
 Other ones requires you to register to the editor website and to accept license. Click on the URL icon to be redirected the tool download page then install it manually.
 
 **OpenOCD** (Open On-Chip Debugger ) is an open source project that provides on-chip programming and debugging support with a
-layered architecture of JTAG interface and TAP support. OpenOCD can be installed from the "Debug Tools" page.
+layered architecture of JTAG interface and TAP support. OpenOCD can be installed from the "Install Runners" page.
 
 **STM32CubeProgrammer** is a programming tool for STM32 products. It is not used for debug but for STM32 targets with an integrated ST-Link or to use an external ST-Link probe, a driver is required for identifying ST-Link as a USB device:
 On Windows, **STM32CubeProgrammer** provides a ST-Link driver installer.
@@ -43,3 +41,7 @@ not supported, Workbench for Zephyr install it on the first time the debug is la
 :::note 
 Uninstalling tools is not supported yet.
 :::
+
+### Extra Runners
+
+Extra runners allow you to customize a specific tool that is not included in the standard options. You can add your own runner to meet those needs.

@@ -40,7 +40,7 @@ The debug server allow to connect the program to the remote GDB. In Zephyr west,
 - Select the runner:
   - A (compatible) annotation indicates which runners are supported for your target.
   - After choosing a runner, a message appears to indicate whether the runner is installed on your system.
-  - If the runner is not installed, click on the "Install" button to be redirected to the "Install Debug Tools" page.
+  - If the runner is not installed, click on the "Install" button to be redirected to the "Install Runners" page.
 - Enter the path to the runner executable if it is not set in the **PATH** environment variable.
 - Enter additional arguments to configure the debug server (often not needed)
 

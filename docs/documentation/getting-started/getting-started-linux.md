@@ -22,7 +22,7 @@ libsdl2-dev libmagic1*) on your system using the package manager. The **ROOT** p
 installation. If the listed tools are already installed on your system, just cancel when the password prompt
 is shown.
 
-![Root Prompt](/img/zw/getting-started/linux/zw_2_install-host-tools-root.png)
+![Root Prompt](/img/update/linux/auth-linux.png)
 :::
 
    * This process downloads and installs portable version of tools required in the Zephyr buildsystem such as:
@@ -31,35 +31,36 @@ is shown.
       - ninja
    * It generates a python virtual environment and an environment script
 
-![Install Host Tools](/img/zw/getting-started/linux/zw_1_install-host-tools.png)
+![Install Host Tools](/img/update/linux/install-host-tools.png)
 
-### Import a Zephyr SDK
-   * Click on "Import SDK" button
+### Import Toolchain
+   * Click on "New Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:
         - Source location: Official SDK
         - SDK Type: Minimal
-        - Version: v0.16.8
-        - Toolchains: aarch64 arm
+        - Version: v0.17.4
+        - Toolchains: aarch64, arm, riscv64, xtensa-espressif_esp32s3
         - Location: enter the parent location where to import the Zephyr SDK
-   * Click on "Import"   
+   * Click on "Import" 
 
-![Import SDK](/img/zw/getting-started/linux/zw_3_sdk-import.png)
+![Import SDK](/img/update/linux/toolchain.png)
 
 
 ### Initialize a West Workspace
    * Click on "Initialize workspace" button
    * Open the newly opened page, enter information about your west workspace instance.
       - For example:
-        - Source location: Minimal from template
+        - Source location: From template
         - Path: https://github.com/zephyrproject
+        - Minimal: marked as check
         - Template: STM32
-        - Branch: v3.7.0
+        - Branch: v4.3.0
         - Location: enter the directory where the west workspace will be imported (the directory name will serve as workspace name)
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
 
-![Import West Workspace](/img/zw/getting-started/linux/zw_4_west-workspace-init.png)
+![Import West Workspace](/img/update/linux/create-wws.png)
 
 
 ## Creating and building the project
@@ -70,18 +71,18 @@ On Workbench for Zephyr, new project are based on samples from Zephyr sources.
    * Select the **West Workspace** to attach to
    * Select the **Zephyr SDK** to use
    * Select the target **Board** (eg. ST STM32F4 Discovery)
-   * Select the **Sample** project as based (eg. blinky)
+   * Select the **Sample** project as based (eg. hello_world)
    * Enter the project name
    * Enter the project location
    * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
 
-![Create New Project](/img/zw/getting-started/linux/zw_5_app-create.png)
+![Create New Project](/img/update/linux/create-app.png)
 
 
 ### Edit your code
 Edit your project if needed, to access to the project sources, go back to the "Explorer" panel
 
-![Edit source code](/img/zw/getting-started/linux/zw_6_app-edit.png)
+![Edit source code](/img/update/linux/edit-code.png)
 
 :::tip
 To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project, right-click on the application > Open in Explorer.
@@ -92,14 +93,14 @@ To switch from "Workbench for Zephyr" panel to the "Explorer" onto your project,
       - Alternatively, Use command key *Ctrl+Shift+B* then select the folder to build.
    * The build output is display in the Terminal
 
-![Build Application](/img/zw/getting-started/linux/zw_7_app-build.png)
+![Build Application](/img/update/linux/build.png)
 
 ## Debugging the application
-### Install Debug tools
-   * Click on "Install Debug Tools" to open the debug tools manager
-   * Click on the Install icon of **OpenOCD** and **STM32CubeProgrammer**
+### Install Runners
+   * Click on "Install Runners" to open the runners manager
+   * Click on the Install icon of **STM32**
 
-![Install Debug Tools](/img/zw/getting-started/linux/zw_8_debug-tools-install.png)
+![Install Runners](/img/update/linux/install-runners.png)
 
 :::info
 For STM32 targets with an integrated ST-Link on Linux, **STM32CubeProgrammer** provides the necessary udev rules for 
@@ -110,6 +111,10 @@ After installing **STM32CubeProgrammer**, find the rules files under `PATH_TO\ST
 ```
 cp <PATH_TO>\STM32CubeProgrammer\Drivers\rules\*.conf /etc/udev/rules.d
 ```
+:::
+
+:::info
+In **Extra Runners**, you can add a custom runner if you prefer.
 :::
 
 ### Configure the debug session
@@ -125,17 +130,17 @@ cp <PATH_TO>\STM32CubeProgrammer\Drivers\rules\*.conf /etc/udev/rules.d
    * Additional argument only for advanced user (values can be found in the help of west for each runner)
    * Press **Apply** to save the configuration into the .vscode/launch.json or **Debug** to apply then run the debug session
 
-![Edit Debug Configuration](/img/zw/getting-started/linux/zw_9_debug-manager.png)
+![Edit Debug Configuration](/img/update/linux/debug-manager.png)
 
 ### Debug the application
 
 After starting the debug session, the code should breaks on main or early (depends on optimization on your project). 
 
-![Debug application](/img/zw/getting-started/linux/zw_10_debug.png)
+![Debug application](/img/zw/getting-started/win/zw_10_debug.png)
 
 The "Debug Toolbar" allows you to **Continue/Pause**, **Step Over**, **Step Into**, **Step Out**, **Restart** or , **Stop**
 
-![Debug Toolbar](/img/zw/getting-started/linux/zw_11_debug-toolbar.png)
+![Debug Toolbar](/img/zw/getting-started/win/zw_11_debug-toolbar.png)
 
 More information about [Debugging on VSCODE](https://code.visualstudio.com/docs/editor/debugging)
    
@@ -145,4 +150,4 @@ To re-run the debug, you don't have to open the "Debug Manager" again as the lau
    * Select the launch configuration for your project
    * Click on the Run button
 
-![Run Debug](/img/zw/getting-started/linux/zw_12_rerun-debug.png)
+![Run Debug](/img/zw/getting-started/win/zw_12_rerun-debug.png)

@@ -16,7 +16,7 @@ Ac6 Workbench for Zephyr is a VS Code extension that adds support of Zephyr deve
 * Build/Flash application
 * Debug application
 
-![Workbench for Zephyr Overview](/img/zw/zw_overview.png)
+![Workbench for Zephyr Overview](/img/update/wfz_overview.png)
 
 ## Open Source
 The Workbench for Zephyr extension is a fully open-source project, built to provide an IDE for the Zephyr community and to help and to introduce Zephyr to newcomers. It is designed to enhance your development experience by providing tools and features that are easy to use. The source code is available on [GitHub](https://github.com/Ac6Embedded/vscode-zephyr-workbench), and we actively encourage developers to contribute, review, and improve the project. By sharing the code openly, we aim to continously evolve the tool with collaboration, transparency, and a users/developers feedback.
