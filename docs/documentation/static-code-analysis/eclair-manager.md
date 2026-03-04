@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # ECLAIR Manager
 
-Bugseng ECLAIR is a certified static analysis tool for software verification, focused on MISRA and BARR-C compliance, software metrics, and the automatic detection of critical software errors.
+BUGSENG ECLAIR is a certified static analysis tool for software verification, focused on MISRA and BARR-C compliance, software metrics, and the automatic detection of critical software errors.
 To open the ECLAIR Manager, select Analysis > Static Code Analysis > ECLAIR Manager or use the `ECLAIR Manager` command in the Command Palette.
 
 ![ECLAIR Manager menu](/img/zw/static-code-analysis/eclair-manager/eclair-manager.png)
@@ -56,7 +56,7 @@ Presets can either be provided by a repository or be local files.
 
 Preset repositories are normal git repositories that contain special `.ecl` files, which are recognized and shown in the UI.
 
-The reference repository for presets is the one provided by Bugseng[^bugseng-preset-repo], which is available by default and contains, along with a variety of curated presets, the specification of the preset format.
+The reference repository for presets is the one provided by BUGSENG[^bugseng-preset-repo], which is available by default and contains, along with a variety of curated presets, the specification of the preset format.
 
 ![Preset repository manager](/img/zw/static-code-analysis/eclair-manager/repo-manager.png)
 
