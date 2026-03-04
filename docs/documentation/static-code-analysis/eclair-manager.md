@@ -3,7 +3,10 @@ sidebar_position: 1
 ---
 # ECLAIR Manager
 
-BUGSENG ECLAIR is a certified static analysis tool for software verification, focused on MISRA and BARR-C compliance, software metrics, and the automatic detection of critical software errors.
+[BUGSENG ECLAIR](https://www.bugseng.com/eclair-static-analysis-tool/) is a certified static analysis tool for software verification, focused on MISRA, BARR-C and AUTOSAR C compliance, software metrics, and the automatic detection of critical software errors.
+
+Zephyr has a [built-in integration with ECLAIR](https://docs.zephyrproject.org/latest/develop/sca/eclair.html). This panel allows you to easily run ECLAIR analyses and browse reports on your Zephyr applications, directly from the Zephyr Workbench.
+
 To open the ECLAIR Manager, select Analysis > Static Code Analysis > ECLAIR Manager or use the `ECLAIR Manager` command in the Command Palette.
 
 ![ECLAIR Manager menu](/img/zw/static-code-analysis/eclair-manager/eclair-manager.png)
@@ -42,7 +45,9 @@ There are currently three kinds of configuration available:
 - [**custom-ecl**](#using-custom-ecl-files): using a custom ECL file
 - [**zephyr-ruleset**](#using-a-zephyr-ruleset): using ruleset provided by the ECLAIR integration in the Zephyr project
 
-> 🛈 The configurations can be saved with the "Save" button. They will be stored in the `.vscode/zephyr-workbench.eclair.json` file of each workspace. You can safely track this file in your version control system.
+:::tip
+The configurations can be saved with the "Save" button. They will be stored in the `.vscode/zephyr-workbench.eclair.json` file of each workspace. You can safely track this file in your version control system.
+:::
 
 ![Main analysis configuration kind](/img/zw/static-code-analysis/eclair-manager/main-analysis-configuration-kind.png)
 
@@ -127,7 +132,9 @@ The analysis log is displayed in the terminal. For more information on running E
 
 Once the analysis is complete, you can use the "Open Report Viewer" button. This will start the ECLAIR report server (`eclair_report`) and open the browser to display the report viewer, allowing you to easily browse the results of the analysis.
 
-> 🛈 If you've also installed the ECLAIR extension which is provided alongside with the ECLAIR installation, <kbd>Ctrl + click</kbd> on a report area will show the location on an editor panel inside your VS Code session.
+:::tip
+If you've also installed the ECLAIR extension which is provided alongside with the ECLAIR installation, <kbd>Ctrl + click</kbd> on a report area will show the location on an editor panel inside your VS Code session.
+:::
 
 ![Report view section](/img/zw/static-code-analysis/eclair-manager/report-view-section.png)
 
