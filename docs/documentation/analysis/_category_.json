@@ -1,0 +1,9 @@
+{
+  "label": "Analysis",
+  "position": 9,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Run Analysis tools"
+  }
+}
