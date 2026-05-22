@@ -33,7 +33,7 @@ To execute tools, Windows asks for permission to be granted.
 :::
 
 ### Import Toolchain
-   * Click on "New Toolchain" button
+   * Click on "Add Toolchain" button
    * Open the newly opened page, enter information about your Zephyr SDK.
       - For example:
         - Source location: Official SDK
@@ -55,6 +55,7 @@ To execute tools, Windows asks for permission to be granted.
         - Minimal: marked as check
         - Template: STM32
         - Branch: v4.3.0
+        - Customize template : Enter the subfolder name for west.yml and modules. Add or remove projects from the template
         - Location: enter the directory where the west workspace will be imported (the directory name will serve as workspace name)
       (takes ~10mins to init then update the workspace)
    * Click on "Import"
@@ -66,14 +67,16 @@ To execute tools, Windows asks for permission to be granted.
 
 ### Create a new application project 
 On Workbench for Zephyr, new project are based on samples from Zephyr sources.
-   * Click on "Create New Application"
+   * Click on "Add Application"
    * Select the **West Workspace** to attach to
    * Select the **Zephyr SDK** to use
    * Select the target **Board** (eg. ST STM32F4 Discovery)
    * Select the **Sample** project as based (eg. hello_world)
    * Enter the project name
+   * Select the application type
    * Enter the project location
-   * Select the Pristine Build option (More information on [Pristine Builds](https://docs.zephyrproject.org/latest/develop/west/build-flash-debug.html#pristine-builds))
+   * Select the debug preset
+   * Advanced options : You can select the python environment, the settings path and enter the application subfolder name
 
 ![Create New Project](/img/update/win/create-app.png)
 
