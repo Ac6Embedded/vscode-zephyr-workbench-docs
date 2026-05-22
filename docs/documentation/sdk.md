@@ -33,6 +33,37 @@ You can choose from the following source locations when adding a toolchain:
 ### Local Folder
 - Register an SDK already installed on your system.
 
+---
+
+# ARM GNU Toolchain Support
+
+Workbench for Zephyr supports importing the **ARM GNU Toolchain**, which provides GNU-based ARM cross-compilation tools for building Zephyr applications.
+
+The ARM GNU Toolchain import requires the following input fields:
+
+- **Version:** Select the ARM GNU Toolchain version to install or use.
+- **Target:** Select the target architecture:
+  - **AArch32 bare-metal (arm-none-eabi)**
+  - **AArch64 bare-metal (aarch64-none-elf)**
+- **Install subfolder:** Automatically generated folder name where the toolchain will be installed.
+- **Location:** Destination path where the toolchain files will be installed.
+
+:::tip
+The **Official** source automatically downloads and installs the selected ARM GNU Toolchain version.
+Alternatively, select **Local** if the toolchain is already installed on your machine.
+:::
+
+![ARM GNU Toolchain](/img/update/zw_sdk_import_gnu.png)
+
+:::note
+The ARM GNU Toolchain provides the compiler and build tools required for ARM development. A valid **Zephyr SDK installation** may still be required for additional components used by Zephyr, depending on the project configuration and target platform.
+:::
+
+## Steps:
+1. Open the **Add Toolchain** panel
+2. Select **ARM GNU Toolchain** as the toolchain family
+3. Select the **Source**, desired **Version**, **target architecture** and **ARM GNU Toolchain** Location
+4. Click **Import**.
 
 ---
 
