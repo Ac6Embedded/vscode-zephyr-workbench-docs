@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 # Puncover
 
@@ -8,7 +8,7 @@ to provide a webpage view of the RAM, ROM and stack usage.
 
 To run Puncover, right-click on the application > Memory Analysis > Puncover.
 
-![Puncover menu](/img/zw/memory-analysis/zw_puncover-menu.png)
+![Puncover menu](/img/update/memory-analysis/puncover_menu.png)
 
 When the local web server is started, the webpage should automatically be opened.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 16
 ---
 
 # Installing Workbench for Zephyr in VS Code Portable Mode
