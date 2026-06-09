@@ -11,7 +11,7 @@ For more information about west workspaces and its topology, please refer the Ze
 
 To import a new "West Workspace", click on the "New West Workspace" button or the "Initialize workspace" button
 
-![New West Workspace](/img/update/workspace/zw_west_workspace_new.png)
+![New West Workspace](/img/zw/workspace/zw_west_workspace_new.png)
 
 ### Source location:
 
@@ -53,15 +53,13 @@ then import the initialize directory into Workbench for Zephyr.
 
 After importing a West Workspace, it appears in the **WEST WORKSPACES** panel on the left. The folder is also added to your VS Code multi-root workspace to access to the sources.
 
-![Manage West Workspace](/img/update/workspace/zw_west_workspace_manage-context.png)
+![Manage West Workspace](/img/zw/workspace/zw_west_workspace_manage-context.png)
 
 In the **WEST WORKSPACES** panel, you can:
 
-- **West Manager**: Manage your west and select manifest projects
 - **Update**: Run *west update* command on the selected west workspace.
 - **Delete from Disk**: Permanently delete the SDK folder from your system (this action is irreversible).
 - **Open Terminal**: Open a terminal instance with the build environment and the environment variables
-- **Install Python Dependencies**: Install python dependencies that are needed
 - **Edit variables**: On the west workspace, you can set the *ARCH_ROOT*, *SOC_ROOT*, *BOARD_ROOT* and *DTS_ROOT* variables to customize the
 the target definition location. Click on the [+] icon to add a value. The environment variable are stored in the `west_workspace/.vscode/settings.json` of your west workspace folder.
 

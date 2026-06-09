@@ -1,9 +1,0 @@
-{
-  "label": "SPDX",
-  "position": 5,
-  "collapsed": true,
-  "link": {
-    "type": "generated-index",
-    "description": "Run SPDX analysis tools"
-  }
-}
