@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 17
 ---
 # Using Custom Boards
 
@@ -9,6 +9,12 @@ There are two ways to make a custom board visible to the extension:
 
 - **Option 1**: Set the `BOARD_ROOT` variable on the west workspace.
 - **Option 2**: Package the board as a Zephyr module, referenced via `EXTRA_ZEPHYR_MODULES` or the west manifest.
+
+Boards are discovered with `west boards`, so a board registered with either option appears in every board picker (Add Application wizard, Change Board, Add Multibuild).
+
+:::tip
+No registration is needed just to build for a board the extension cannot discover: every board picker ends with "Enter custom board...", which lets you type the board identifier manually.
+:::
 
 ---
 
@@ -37,7 +43,7 @@ The minimal required structure is:
 
 Set `BOARD_ROOT` on the west workspace so the extension searches an additional directory for board definitions.
 
-1. In the **WEST WORKSPACES** panel, expand the workspace and click **[+]** next to `BOARD_ROOT`.
+1. In the "West workspaces" view, expand the workspace, then its "Configurations" group, and click the inline [+] (Add value) on the `BOARD_ROOT` row.
 
 ![West Workspace BOARD_ROOT](/img/zw/workspace/zw_board_root.png)
 
@@ -47,6 +53,10 @@ Set `BOARD_ROOT` on the west workspace so the extension searches an additional d
 
 :::info
 Example: for the layout `/home/user/my_boards/boards/ac6/myboard/`, set `BOARD_ROOT` to `/home/user/my_boards`.
+:::
+
+:::note
+The "Configurations" group holds the other workspace search roots too (`DTS_ROOT`, `SOC_ROOT`, `ARCH_ROOT`, `SNIPPET_ROOT`). They are set the same way: [+] to add a value, the pencil and remove icons on a value to edit or delete it.
 :::
 
 ---
@@ -72,11 +82,11 @@ build:
     board_root: .
 ```
 
-Then register the module using one of the two options below.
+Then register the module using one of the options below.
 
 ### Option 2.1: EXTRA_ZEPHYR_MODULES (per application)
 
-1. In the **APPLICATIONS** panel, expand the application and locate **EXTRA_ZEPHYR_MODULES**. Click **[+]**.
+1. In the "Applications" view, expand the application (or the build configuration), then "Arguments & Environment" > "EXTRA", and click the inline [+] on the `EXTRA_ZEPHYR_MODULES` row.
 
 ![EXTRA_ZEPHYR_MODULES](/img/zw/applications/zw_extra_zephyr_modules.png)
 
@@ -84,9 +94,13 @@ Then register the module using one of the two options below.
 
 ![Enter module path](/img/zw/applications/zw_extra_zephyr_modules_dialog.png)
 
-## Option 2.2: EXTRA_ZEPHYR_MODULES (CMake)
+:::note
+The "EXTRA" group also holds `EXTRA_CONF_FILE` and `EXTRA_DTC_OVERLAY_FILE`, next to the other per-configuration rows (`SHIELD`, `SNIPPETS`). See [Applications](application.md) for the full "Arguments & Environment" reference.
+:::
 
-You can also specify `EXTRA_ZEPHYR_MODULES` directly in your application’s `CMakeLists.txt` file. This is useful if you want to ensure the module is always included when building the application, regardless of the workspace configuration.
+### Option 2.2: EXTRA_ZEPHYR_MODULES (CMake)
+
+You can also specify `EXTRA_ZEPHYR_MODULES` directly in your application's `CMakeLists.txt` file. This is useful if you want to ensure the module is always included when building the application, regardless of the workspace configuration.
 
 Add the following line to your `CMakeLists.txt`:
 

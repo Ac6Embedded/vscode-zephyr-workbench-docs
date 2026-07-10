@@ -34,7 +34,7 @@ After the **SDK** is download and installed, it is listed in the **ZEPHYR SDK** 
 
 ## Import Renesas minimal west workspace
 
-Import a minimal west workspace for NXP.
+Import a minimal west workspace for Renesas.
 
 * Click on "Initialize workspace" or "New West Workspace" button
 * Open the newly opened page, enter information about your west workspace instance.

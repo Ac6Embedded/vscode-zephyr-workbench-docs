@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 21
 ---
 
 # Installing Workbench for Zephyr in VS Code Portable Mode
@@ -28,14 +28,14 @@ Portable mode provides full isolation:
 
 ## How Portable Mode Works
 
-VS Code runs in portable mode when it detects a `data` directory next to its executable,
-or when explicit portable directories are provided at launch.
+On Windows and Linux, VS Code runs in portable mode when it detects a `data` directory next to its executable.
+On macOS, the directory must be named `code-portable-data` and placed next to the `Visual Studio Code.app` application.
 
 In portable mode:
 
-- Extensions are stored in `data/extensions`
-- User settings are stored in `data/user-data`
-- Workbench for Zephyr installs all tools into `data/.zinstaller`
+- Extensions are stored in `data/extensions` (`code-portable-data/extensions` on macOS)
+- User settings are stored in `data/user-data` (`code-portable-data/user-data` on macOS)
+- Workbench for Zephyr installs all tools into `data/.zinstaller` (`code-portable-data/.zinstaller` on macOS)
 - Nothing is written to system locations
 
 ---
@@ -94,9 +94,9 @@ Directory layout:
 
 ## macOS
 
-macOS supports a **portable ZIP-based setup** that works the same way as Linux.
-When using the ZIP archive, Visual Studio Code runs in portable mode by detecting
-a `data` directory next to the application binaries.
+macOS also supports a portable setup, but the layout differs from Windows and Linux:
+the portable directory must be named `code-portable-data` and placed **next to the
+`Visual Studio Code.app` application**, not inside it.
 
 ### Download (choose one)
 
@@ -108,6 +108,33 @@ a `data` directory next to the application binaries.
 
 - **Universal (ARM64 + Intel)**  
   https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal
+
+### Extract and Set Up
+
+1. Extract the downloaded archive. You get `Visual Studio Code.app`.
+
+2. Move `Visual Studio Code.app` into a directory of your choice
+   (for example, `~/VSCode-Zephyr-Portable`).
+
+3. Create an empty folder named `code-portable-data` next to the application.
+
+Directory layout:
+
+```
+~/VSCode-Zephyr-Portable
+├─ Visual Studio Code.app
+└─ code-portable-data/
+```
+
+4. Launch VS Code by opening `Visual Studio Code.app`.
+
+:::note
+If portable mode does not activate (settings and extensions are still stored in your user profile), clear the macOS quarantine attribute and relaunch:
+
+```
+xattr -dr com.apple.quarantine "Visual Studio Code.app"
+```
+:::
 
 ---
 

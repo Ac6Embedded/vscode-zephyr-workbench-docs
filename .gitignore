@@ -18,3 +18,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Raw screenshot drops for docs updates (processed by scripts/annotate_screenshots.py)
+/raw-screenshots
