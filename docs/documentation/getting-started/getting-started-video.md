@@ -1,5 +1,5 @@
-﻿---
-sidebar_position: 4
+---
+sidebar_position: 5
 ---
 
 # Getting Started Video Tutorial
@@ -15,4 +15,9 @@ You can follow this video walkthrough of the Workbench for Zephyr setup and crea
   allowFullScreen
 />
 
-If you prefer written instructions, you can also follow the step-by-step guides in the getting started documentation.
+:::note
+This video was recorded with an older version of Workbench for Zephyr and some button names have changed
+since (for example "New Toolchain" is now "Add Toolchain", and "Create New Application" is now
+"Add Application"). The overall flow is the same. For the current steps, follow the written guides:
+[Windows](getting-started-win.md), [Linux](getting-started-linux.md), [macOS](getting-started-macosx.md).
+:::

@@ -1,9 +1,11 @@
 ---
-sidebar_position: 12
+sidebar_position: 20
 ---
 # DTS LSP Integration
 
-This page explains how Workbench for Zephyr integrates with the DeviceTree Language Server by Kyle Bonnici([DTS-LSP](https://github.com/kylebonnici/dts-lsp)), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
+This page explains how Workbench for Zephyr integrates with the DeviceTree Language Server by Kyle Bonnici ([DTS-LSP](https://github.com/kylebonnici/dts-lsp)), what it does for you, and what to expect when working with `.dts` and `.overlay` files.
+
+The `dts-lsp` extension is installed automatically with Workbench for Zephyr; no manual setup is needed.
 
 ---
 
@@ -14,6 +16,12 @@ This page explains how Workbench for Zephyr integrates with the DeviceTree Langu
   - Application overlays (`.overlay`) use the app build directory’s `build_info.yml` to derive include paths, bindings, the main `dtsFile`, overlays, and compile commands.
   - Workspace DeviceTree files (`.dts` in the Zephyr tree) use the Zephyr kernel tree to derive include and bindings paths.
 - Keeps contexts in sync as files change and removes them when files close or are deleted.
+
+### Which devicetree tool does what
+
+- **DTS LSP** (this page): language features while editing `.dts` and `.overlay` files in the text editor.
+- **[Devicetree Manager](devicetree-manager.md)**: a visual devicetree editor to configure pins and peripherals and generate overlay files, without writing DTS by hand.
+- **[DT Doctor](analysis/static-code-analysis/dt-doctor.md)**: on-demand diagnostics that help find the cause of devicetree-related build errors.
 
 ---
 
@@ -43,7 +51,7 @@ What to expect
 
 ### Workspace DTS Contexts (`zephyr/**/*.dts`)
 
-![DTS-LSP-Overlays](/img/zw/dts-lsp/dts-lsp-workspace.gif)
+![DTS-LSP-Workspace](/img/zw/dts-lsp/dts-lsp-workspace.gif)
 
 When a DTS file inside the Zephyr tree is opened:
 
@@ -82,7 +90,7 @@ What to expect
 
 ## Troubleshooting
 
-- Ensure the `KyleMicallefBonnici.dts-lsp` [extension](https://marketplace.visualstudio.com/items?itemName=KyleMicallefBonnici.dts-lsp) is installed and enabled.
-- If overlays don’t resolve correctly, run a build to ensure `build_info.yml` and `compile_commands.json` exist.
+- The `KyleMicallefBonnici.dts-lsp` [extension](https://marketplace.visualstudio.com/items?itemName=KyleMicallefBonnici.dts-lsp) is installed automatically with Workbench for Zephyr. If language features are missing, check in the Extensions view that it has not been disabled or uninstalled.
+- If overlays don't resolve correctly, run a build to ensure `build_info.yml` and `compile_commands.json` exist.
 - If contexts appear stale after changing `build_info.yml`, the integration removes and recreates the context automatically. If issues persist, close and reopen the file.
-- Restart VSCode
+- As a last resort, restart VS Code.

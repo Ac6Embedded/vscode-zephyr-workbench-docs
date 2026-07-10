@@ -6,69 +6,61 @@ sidebar_position: 3
 
 ## Requirements
 
-* VS Code
-* On Linux: Bash, Package manager
-* On macOS: Bash, Homebrew
+- Visual Studio Code
+- **Windows**: nothing to install beforehand. All tools are downloaded automatically as portable versions.
+- **Linux**: Bash and your distribution's package manager. Some packages are installed with sudo, so administrator rights are required.
+- **macOS**: Bash and [Homebrew](https://brew.sh). Homebrew is mandatory: without it, the host tools installation stops with the error "Homebrew is not installed. Install it from https://brew.sh, then retry."
 
-## Installation
+## Install the extension
 
-The installation consists on installing the VSCode extension then the host tools required for the Zephyr build system
-
-1. Open Visual Studio Code then enter the Extension Marketplace
-2. Search for "Workbench for Zephyr" extension
-3. Click on Install
+1. Open Visual Studio Code and go to the Extension Marketplace.
+2. Search for the "Workbench for Zephyr" extension.
+3. Click **Install**.
 
 ![Install from Marketplace](/img/zw/installation/zw_install-market.png)
 
+### Companion extensions
+
+Installing Workbench for Zephyr automatically installs a few companion extensions:
+
+- **Devicetree Manager for Zephyr** (Ac6): visual editor for the devicetree and pin muxing of your application.
+- **Serial Monitor** (Microsoft): view the serial output of your board.
+- **C/C++** (Microsoft): IntelliSense and debugging support for C and C++ code.
+- **Cortex-Debug**: debug backend for ARM Cortex-M targets.
+- **File Downloader** (Microsoft DevLabs): used internally to download tools.
+- **DeviceTree Language Server** (by Kyle Bonnici): language features for `.dts` and `.overlay` files (see [DTS LSP Integration](dts-lsp.md)).
+
 ## Host Tools Installation
 
-Zephyr requires you to install some host dependencies. Workbench for Zephyr provides ZInstaller to easily set up the build system.
+Zephyr requires several host dependencies (CMake, Ninja, Python, and more). Workbench for Zephyr installs them for you:
 
-To complete the host tools installation, go to the Workbench for Zephyr tab then click on "Install Host Tools". This process takes several minutes to install some tools locally and some on your system.
+1. Open the Workbench for Zephyr tab in the activity bar.
+2. Click **Install Host Tools**.
 
 ![Install host tools](/img/update/install-host-tools.png)
 
-| Windows              | Linux               | MacOSX (using brew)  |
-| -------------------- | ------------------- | -------------------- |
-| Python-portable      | Python-portable     | Python & Python-tk   |
-| 7z                   | OpenSSL-portable    | Wget                 |
-| CMake-portable       | CMake-portable      | Cmake                |
-| Ninja-portable       | Ninja-portable      | Ninja                |
-| Git-portable         | Git                 | Git                  |
-| GPerf                | GPerf               | Gperf                |
-|                      | CCache              | Ccache               |
-|                      | Dfu-utils           | Dfu-util             |
-|                      | Xz-utils            | Xz                   |
-|                      | Unzip               | Yq                   |
-|                      | File                | Libmagic             |
-|                      | Make                |                      |
-|                      | Libsdl2-dev         |                      |
-|                      | Libmagic1           |                      |
+The installation takes several minutes and runs in a terminal. A progress notification is shown, and you can cancel it at any time.
 
-For more information about the Zephyr dependencies, refer to the [documentation](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies).
+What gets installed depends on your OS:
+
+- **Windows**: portable versions of Python, CMake, Ninja, gperf, Device Tree Compiler, Git, and wget, all placed in the `.zinstaller` folder.
+- **Linux**: Python (portable AppImage), CMake, and Ninja are direct downloads. The remaining dependencies (git, gperf, dtc, gcc, make, ccache, dfu-util, wget, xz, file, SDL2, hidapi, libmagic, unzip, python3 support packages) are installed with your distribution's package manager. You will be asked for your sudo password.
+- **macOS**: everything installs through Homebrew: Python, CMake, Ninja, gperf, Device Tree Compiler, Git, plus utilities (ccache, libmagic, wget, yq, xz, dfu-util, libftdi, hidapi).
+
+For more information about the Zephyr dependencies, refer to the [Zephyr documentation](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-dependencies).
+
+:::tip
+Prefer to skip tools you already have, pick which Python is used, or repair a single tool? Use the [Advanced Host Tools Installation](advanced-host-tools.md) instead. After installation, the [Host Tools Manager](host-tools-manager.md) lets you verify the tools and switch each one between the bundled and the system version.
+:::
 
 :::note
-The portable tools are installed under `$USERDIR/.zinstaller` or under `$VSCODE_PORTABLE/data/.zinstaller` if your are using VSCode in [portable mode](https://code.visualstudio.com/docs/editor/portable/).
+The portable tools are installed under `$USERDIR/.zinstaller`, or under `$VSCODE_PORTABLE/.zinstaller` if you are using VS Code in [portable mode](https://code.visualstudio.com/docs/editor/portable/).
 
 Uninstalling Workbench for Zephyr does not uninstall the host tools. You can manually delete the `.zinstaller` folder.
 :::
 
-## Debug Requirements
+## After the installation
 
-On every platform, you might need to install the debug server and the JTAG probe driver to be able to debug on Workbench for Zephyr. For example:
-* LinkServer Debug Host Tools
-* J-Link Debug Host Tools
+Once the host tools are installed, Workbench for Zephyr automatically installs the OpenOCD runner and sets it as the default. A message then proposes to install additional runners: click **Install Runners** to open the runners page.
 
-:::info
-On **Linux** and **MacOSX**, the Host tools and Debug tools are installed from a **BASH** script. Ensure bash is installed on your system.
-:::
-
-On MacOSX, Homebrew is mandatory to install required tools (such as python3, CMake or Ninja) for the build system. To install Homebrew, please refer to the official [documentation](https://brew.sh/). 
-
-:::danger[Note]
-On Linux, if you use the pyOCD debug server, the version provided with Workbench for Zephyr has dependency with libffi7, you might need to install this package using the following commands: 
-
-wget http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi7_3.3-4_amd64.deb
-
-sudo dpkg -i libffi7_3.3-4_amd64.deb
-:::
+Runners are the debug servers and flashing tools used to program and debug your board (J-Link, STM32CubeProgrammer, pyOCD, and more). Depending on your hardware, you may also need the driver of your JTAG probe. See [Install Runners](install-runners.md) to install what your board needs.

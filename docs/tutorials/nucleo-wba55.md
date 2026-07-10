@@ -37,7 +37,7 @@ After the **SDK** is download and installed, it is listed in the **ZEPHYR SDK** 
 
 ## Import STM32 minimal west workspace
 
-Import a minimal west workspace for NXP.
+Import a minimal west workspace for STM32.
 
 * Click on "Initialize workspace" or "New West Workspace" button
 * Open the newly opened page, enter information about your west workspace instance.
@@ -56,7 +56,7 @@ Import a minimal west workspace for NXP.
 After the **Workspace** is download and installed, it is listed in the **WEST WORKSPACES** view.
 
 ## Create a new blinky project
-The environment set up complete. We are now going to create a `blinky` project for the Arduino Uno R4 WiFi board.
+The environment setup is complete. We are now going to create a `blinky` project for the ST Nucleo WBA55CG board.
 
 * Click on "Create New Application"
 * Select the **West Workspace** previously init
