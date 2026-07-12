@@ -27,6 +27,7 @@ Available packs (filtered for your operating system):
 | Silabs | Silabs Simplicity Commander, USB to UART Bridge VCP CP210x Universal Drivers, J-Link Software |
 | ESP32 | OpenOCD ESP32, USB to UART Bridge VCP CP210x Universal Drivers |
 | Infineon | OpenOCD Infineon |
+| Texas Instruments | OpenOCD TI |
 
 Tools that cannot be installed automatically open their vendor download page instead, then you install them manually.
 
@@ -53,7 +54,11 @@ Uninstalling tools is not supported yet.
 
 ### OpenOCD variants
 
-Expand the **OpenOCD** row to see the available distributions: OpenOCD Zephyr (default), OpenOCD ESP32, OpenOCD xPack, OpenOCD Infineon, and OpenOCD Custom. Each variant can be installed independently, and the "Set default" radio selects which one the extension uses.
+Expand the **OpenOCD** row to see the available distributions: OpenOCD Zephyr (default), OpenOCD ESP32, OpenOCD xPack, OpenOCD TI, OpenOCD Infineon, and OpenOCD Custom. Each variant can be installed independently, and the "Set default" radio selects which one the extension uses.
+
+:::tip
+For TI targets (CC13xx/CC26xx, CC23xx, MSPM0 and others) with an XDS110 probe, install **OpenOCD TI** and set it as default. It is the TI build of OpenOCD shipped with Code Composer Studio.
+:::
 
 :::warning
 With Zephyr SDK 1.x and later, the default OpenOCD is passed to the build system. After changing it, run a pristine rebuild (right-click on the application > Clean > Rebuild/Pristine) so the build picks up the new tool.
