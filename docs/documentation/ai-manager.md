@@ -239,3 +239,7 @@ The settings of the MCP server are listed in the [Settings Reference](settings-r
 - [Install Runners](install-runners.md): the flash and debug tools an agent needs to work with a board.
 - [Debug Session](debug-session.md): the Debug Manager, which `configure_debug` uses to set up debugging.
 - [Kconfig Manager](configuration/kconfig-manager.md): review by hand the Kconfig options an agent changed.
+
+## Training
+
+Ac6 runs a training course on working with AI coding agents in embedded development: [AI-Assisted Embedded Development](https://www.ac6-training.com/en/ai1/ai-assisted-embedded-development).
