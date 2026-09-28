@@ -166,6 +166,8 @@ The "Examples" tab lists requests to try, grouped by task: Setup, Build, Flash, 
 
 ![Examples to try](/img/zw/ai-manager/ai-manager-examples.png)
 
+To follow a full session, from a new application to a board in the loop, see the tutorial [Develop on a board with an AI agent](../tutorials/ai-agent-hardware-in-the-loop.md).
+
 ## Zephyr Project MCP
 
 The "Zephyr Project MCP" page connects your agents to the Zephyr Project's own MCP server, run by Kapa.ai. It answers questions from the Zephyr documentation, source code and GitHub activity, with its sources.
