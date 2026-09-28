@@ -19,6 +19,10 @@ sidebar_position: 3
 
 ![Install from Marketplace](/img/zw/installation/zw_install-market.png)
 
+:::tip Using Cursor?
+Workbench for Zephyr also runs in Cursor. The extension is installed from the Cursor marketplace and a few companion extensions differ: see [Getting started with Cursor](../tutorials/cursor.md).
+:::
+
 ### Companion extensions
 
 Installing Workbench for Zephyr automatically installs a few companion extensions:
