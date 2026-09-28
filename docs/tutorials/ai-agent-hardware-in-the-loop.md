@@ -13,12 +13,25 @@ This tutorial follows a typical session with an AI coding agent connected to Wor
 4. Collect data from the board through its shell.
 5. Change the firmware and check the change on the board.
 
+:::tip
+Each step below is a separate request, to show what happens at each stage. You do not need to split the work: the agent can do the whole session from a single request, for example:
+
+```text
+Create an application from the Zephyr hello_world sample
+for the FRDM-MCXN947 board. Enable the shell with the kernel commands
+and thread stack usage, flash the board and run kernel stacks.
+Then give the thread closest to overflowing a larger stack,
+flash again and check the result on the board.
+```
+:::
+
 ## Before you start
 
-- A west workspace opened as a folder in VS Code, with a Zephyr SDK that suits it. See [West Workspaces](../documentation/west-workspace.md) and [Toolchains](../documentation/sdk.md).
-- The flash runner of your board installed, LinkServer for the FRDM-MCXN947. See [Install Runners](../documentation/install-runners.md).
+- A west workspace opened as a folder in VS Code. See [West Workspaces](../documentation/west-workspace.md).
 - The board connected over USB. Close any serial monitor that has its port open: a serial port opens in one program at a time.
 - An agent connected to Workbench for Zephyr, with the default Core permissions. See [Connect an agent](../documentation/ai-manager.md#connect-an-agent).
+
+You do not need to install the Zephyr SDK or the flash runner of your board first. When one is missing, the agent installs it when it needs it, after asking you. A few runners are only distributed by their vendor, such as LinkServer, the runner the FRDM-MCXN947 uses by default: for those, the agent gives you the download page, or flashes with another runner the board supports, such as pyOCD, which it can install.
 
 :::tip
 Agent terminals do not come to the front by default. To see each build, flash and serial terminal come to the front as the agent starts it, set `zephyr-workbench.mcp.revealTerminal` to `always`.
@@ -30,7 +43,7 @@ Each request below is one turn of this loop. The agent builds, flashes and reads
 
 ```mermaid
 flowchart TB
-  ask["You ask in plain words"] --> change["Agent changes code or Kconfig"]
+  ask["You ask in plain words"] --> change["Agent changes code, Kconfig<br/>or devicetree overlay"]
   change --> build["Build"]
   build --> flash["Flash the board"]
   flash --> read["Read the serial console,<br/>send shell commands"]
@@ -44,7 +57,8 @@ flowchart TB
 In the agent chat, ask:
 
 ```text
-Create an application from the Zephyr hello_world sample for the FRDM-MCXN947 board, and build it.
+Create an application from the Zephyr hello_world sample
+for the FRDM-MCXN947 board, and build it.
 ```
 
 The agent looks up the sample and the board in the west workspace, then asks to create the application. VS Code shows what it will create and where:
@@ -60,7 +74,8 @@ Click **Allow**. The application appears in the "Applications" view, and the bui
 Ask:
 
 ```text
-Enable the Zephyr shell with the kernel commands and thread stack usage, so I can run kernel stacks on the board. Then rebuild.
+Enable the Zephyr shell with the kernel commands and thread stack usage,
+so I can run kernel stacks on the board. Then rebuild.
 ```
 
 The agent changes the Kconfig options through Workbench for Zephyr, which checks that each value takes effect and writes them in a managed section of `prj.conf`. Under the Core preset this does not ask. Open `prj.conf` to review the section:
@@ -94,7 +109,8 @@ The capture stops by itself after 10 minutes. To stop it earlier, close its term
 Ask:
 
 ```text
-Run kernel stacks on the board. Which thread is closest to overflowing its stack?
+Run kernel stacks on the board.
+Which thread is closest to overflowing its stack?
 ```
 
 The agent sends `kernel stacks` to the Zephyr shell through the running capture. Sending text to the board asks first, with the exact text and the port. Choose **Allow for This Session** to let the agent send more commands on this port without asking.
@@ -106,7 +122,8 @@ The command, and the table the board prints in reply, show in the serial termina
 Ask:
 
 ```text
-Give that thread a larger stack, rebuild, flash and check on the board again.
+Give that thread a larger stack, rebuild, flash
+and check on the board again.
 ```
 
 The agent changes the stack size (for the shell or another system thread, a Kconfig option in `prj.conf`), builds, flashes, runs `kernel stacks` again and compares the usage before and after the change. If you chose **Allow for This Session** in the previous steps, it does this without asking again. Each change is checked on the board, not only in the build.
@@ -124,3 +141,4 @@ The agent changes the stack size (for the shell or another system thread, a Kcon
 - Choose what the agent may do without asking: [Permissions](../documentation/ai-manager.md#choose-what-agents-may-do).
 - Debug on the board with the agent, for example "Start debugging, stop in main, step a few lines and show me the local variables": [Debug Session](../documentation/debug-session.md).
 - More requests to try: the "Examples" tab of the [AI Manager](../documentation/ai-manager.md#try-an-example).
+- Learn to work with AI coding agents on embedded projects: the Ac6 training course [AI-Assisted Embedded Development](https://www.ac6-training.com/en/ai1/ai-assisted-embedded-development).

@@ -10,10 +10,6 @@ The AI Manager is where you connect your agents, choose what they may do without
 
 ![AI Manager](/img/zw/ai-manager/ai-manager.png)
 
-:::note
-The AI Manager is available from Workbench for Zephyr 4.3.0. Flashing, debugging, installing runners, running commands and the "Examples" tab need 4.3.1 or later. Its MCP server needs VS Code 1.90 or later.
-:::
-
 ## How it works
 
 Agents talk to Workbench for Zephyr through a local MCP server that runs inside VS Code. The agent starts a small bridge program, which forwards each request to the VS Code window that has the application open.
@@ -170,7 +166,7 @@ To follow a full session, from a new application to a board in the loop, see the
 
 ## Zephyr Project MCP
 
-The "Zephyr Project MCP" page connects your agents to the Zephyr Project's own MCP server, run by Kapa.ai. It answers questions from the Zephyr documentation, source code and GitHub activity, with its sources.
+The "Zephyr Project MCP" page connects your agents to the Zephyr Project's own MCP server, run by Kapa.ai at `https://zephyrproject.mcp.kapa.ai`. It answers questions from the Zephyr documentation, source code and GitHub activity, with its sources. The Zephyr documentation describes it in [Kapa.ai Documentation Assistant](https://docs.zephyrproject.org/latest/develop/tools/kapa_ai.html).
 
 It is a hosted service: your questions leave your machine, and the first time an agent uses it you sign in once in your browser. Answers are AI-generated and can be wrong, so check what matters in the documentation.
 

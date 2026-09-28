@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Crop raw screenshots, draw red highlight rectangles, write final doc images.
+"""Crop raw screenshots, blur private text, draw red highlight rectangles,
+write final doc images.
 
 Usage:
     python3 scripts/annotate_screenshots.py <spec.json> [--only ID]
@@ -15,6 +16,7 @@ output is cropped or downscaled.
         "out": "static/img/zw/workspace/zw_west_workspace_import.png",
         "crop": [120, 80, 900, 700],          # optional [x, y, w, h]
         "rects": [[400, 500, 180, 28]],       # optional red boxes [x, y, w, h]
+        "blur": [[250, 310, 96, 26]],         # optional boxes to blur, such as a user name
         "max_width": 1200                     # optional downscale target
       }
     ]
@@ -26,17 +28,29 @@ import json
 import os
 import sys
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 RED = "#E5342B"
 LINE_PX = 3          # rectangle stroke at final output size
 PAD_PX = 4           # breathing room around the highlighted element
+BLUR_PAD_PX = 2      # raw pixels blurred around each blur box, for anti-aliasing
+
+
+def blur(img, box):
+    x, y, w, h = box
+    x0, y0 = max(0, x - BLUR_PAD_PX), max(0, y - BLUR_PAD_PX)
+    x1, y1 = min(img.width, x + w + BLUR_PAD_PX), min(img.height, y + h + BLUR_PAD_PX)
+    region = img.crop((x0, y0, x1, y1))
+    radius = max(5, round((y1 - y0) / 5))
+    img.paste(region.filter(ImageFilter.GaussianBlur(radius)), (x0, y0))
 
 
 def process(job, repo_root):
     src = os.path.join(repo_root, job["src"])
     out = os.path.join(repo_root, job["out"])
     img = Image.open(src).convert("RGB")
+    for box in job.get("blur", []):
+        blur(img, box)
 
     ox = oy = 0
     if "crop" in job:
