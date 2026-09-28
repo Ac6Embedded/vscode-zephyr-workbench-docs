@@ -31,6 +31,11 @@ const config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -149,6 +154,9 @@ const config = {
           },
         ],
         copyright: `Copyright © 2004-${new Date().getFullYear()} Ac6. Built with Docusaurus.`,
+      },
+      mermaid: {
+        theme: {light: 'neutral', dark: 'dark'},
       },
       prism: {
         theme: prismThemes.github,

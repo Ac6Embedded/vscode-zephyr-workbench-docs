@@ -23,6 +23,21 @@ These settings are set in your User settings.
 | `zephyr-workbench.sbomTotal.failOn` | `actionable` | When the SBOM verification is reported as failed: `actionable` (any actionable vulnerability), `risk` (risk verdict only) or `never` (always informational). |
 | `zephyr-workbench.sbomTotal.includeSdk` | `false` | Also generate `sdk.spdx` and scan it separately as build environment information. It never changes the firmware verdict. |
 
+## AI agent (MCP) settings
+
+These settings control the local MCP server that AI coding agents use, see [AI Manager](ai-manager.md). The ones marked User only are read from your User settings alone, so a project's `.vscode/settings.json` cannot change them.
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| `zephyr-workbench.mcp.enabled` | `auto` | User only. `auto`: publish this window to agents and start the server once an agent asks for it. `on`: always run the server while the window is open. `off`: never run it. |
+| `zephyr-workbench.mcp.permissions` | `core` | User only. What agents may do: `core`, `full` or `custom`. Easiest to change from the **Permissions** tab of the AI Manager. |
+| `zephyr-workbench.mcp.toolPermissions` | `{}` | User only. The choice for each tool when the preset is `custom`: `allow`, `ask` or `block`. A tool not listed gets its `core` choice. |
+| `zephyr-workbench.mcp.port` | `0` | User only. Port of the server. `0` lets the system choose, which lets several VS Code windows run at once. |
+| `zephyr-workbench.mcp.homeDir` | (empty) | User only. Folder of the bridge, its launcher and the window records. Empty: `~/.zephyr-workbench/mcp`. |
+| `zephyr-workbench.mcp.revealTerminal` | `silent` | Whether a task an agent starts brings its terminal to the front: `always`, `silent` or `never`. The task always runs in a terminal you can read and stop. |
+| `zephyr-workbench.mcp.defaultWaitSeconds` | `45` | How long a build or other long action waits before the agent gets a job to follow instead. A confirmation dialog waits 5 seconds less for your answer: 40 seconds by default, never less than 10 or more than 120. |
+| `zephyr-workbench.mcp.showStatusBar` | `true` | Show the **MCP** status bar item. |
+
 ## Per-project settings
 
 These settings are stored per folder (Workspace Folder scope): on the application folder, or on the west workspace folder for the `westWorkspace.*` keys. Prefer changing them through the **Applications** view (Change Board, Change Toolchain, the "Arguments & Environment" group, and so on, see [Applications](application.md)).
@@ -127,5 +142,11 @@ Some commands are only reachable (or simply handy) from the Command Palette (`Ct
 | Zephyr Workbench: Debug Application | Start a debug session for the application. |
 | Zephyr Workbench: Debug Manager | Open the [Debug Manager](debug-session.md). |
 | Zephyr Workbench: Devicetree Manager | Open the [Devicetree Manager](devicetree-manager.md). |
+| Zephyr Workbench: AI Manager | Open the [AI Manager](ai-manager.md). |
+| Zephyr Workbench: Configure MCP Permissions | Open the **Permissions** tab of the [AI Manager](ai-manager.md). |
+| Zephyr Workbench: Check AI Agent Connection (MCP) | Test the connection the way an agent makes it, and report what to fix. |
+| Zephyr Workbench: Copy MCP Configuration for an Agent | Copy a ready-made server entry for the agent you pick. |
+| Zephyr Workbench: Start MCP Server, Stop MCP Server, Restart MCP Server | Control the local MCP server of the window. |
+| Zephyr Workbench: Show MCP Activity Log | Open the "Zephyr Workbench: MCP" output, which records every agent request. |
 | Zephyr Workbench: Set SBOM Total API Token | Store the API token used by the [SPDX analysis](analysis/spdx/index.md). |
 | West: Get a west version | Print the west version in the Zephyr terminal. |

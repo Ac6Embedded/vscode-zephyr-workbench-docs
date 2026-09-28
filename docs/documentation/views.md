@@ -14,9 +14,13 @@ The top view is a list of shortcuts to the most used features:
 - **Add Application**: open the wizard to create or import an [application](application.md).
 - **Add West Workspace**: open the wizard to create or import a [west workspace](west-workspace.md).
 - **Add Toolchain**: open the wizard to install or import a [toolchain](sdk.md).
+
+The "Managers" view below it opens the managers:
+
 - **Devicetree Manager**: open the [Devicetree Manager](devicetree-manager.md).
 - **Debug Manager**: open the [Debug Manager](debug-session.md).
 - **West Manager**: open the [West Manager](west-manager.md).
+- **AI Manager**: open the [AI Manager](ai-manager.md).
 
 :::note
 Before the host tools are installed, two extra rows appear at the top: **Install Host Tools** and **Install Host Tools (Advanced)**. They disappear once the installation completes. See [Installation](installation.md) and [Advanced Host Tools](advanced-host-tools.md).
@@ -162,6 +166,8 @@ Items appear on the left side of the status bar when the file in the active edit
 - **Build**: build the application (gear icon).
 - **Debug**: debug the application.
 - **DT Manager**: shown only while a devicetree file (`.overlay`, `.dts`, `.dtsi`) is open. It opens the [Devicetree Manager](devicetree-manager.md) for the application.
+
+On the right side, the **MCP** item shows the state of the AI agent server and opens the [AI Manager](ai-manager.md). It reads **MCP: answer needed** while an agent waits for your answer in a dialog.
 
 ## Zephyr Dashboard panel
 

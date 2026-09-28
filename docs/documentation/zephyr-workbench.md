@@ -20,6 +20,7 @@ Install it from the [VS Code Marketplace](https://marketplace.visualstudio.com/i
 * Inspect build results in the [Workbench Dashboard](analysis/workbench-dashboard.md) and run [memory analysis](analysis/memory-analysis/ram-report.md) reports and plots
 * Generate and verify SPDX SBOMs ([SPDX / SBOM](analysis/spdx/index.md))
 * Run static analysis with the [ECLAIR Manager](analysis/static-code-analysis/eclair-manager.md) and diagnose devicetree build errors with [DT Doctor](analysis/static-code-analysis/dt-doctor.md)
+* Connect AI coding agents (Claude Code, OpenAI Codex, GitHub Copilot, Cursor, ...) to build, flash and debug your applications, with the permissions you choose ([AI Manager](ai-manager.md))
 
 ![Workbench for Zephyr Overview](/img/update/wfz_overview.png)
 
