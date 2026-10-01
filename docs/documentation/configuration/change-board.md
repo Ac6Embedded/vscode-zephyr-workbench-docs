@@ -7,10 +7,10 @@ To change the application target board, right-click on the application > Build C
 
 ![Change board menu](/img/zw/configuration/zw_change-board.png)
 
-A quick pick lists the boards of the west workspace, including any [custom boards](../custom.md).
+A quick pick lists the boards of the west workspace and the boards the application adds, including any [custom boards](../custom.md). See [How boards are found](../custom.md#how-boards-are-found) for the folders searched.
 
 :::info
-There may be a slight delay before the board selector appears: the extension runs `west boards` to discover the boards from the west workspace and any custom board locations, and parses the board definition files (`board.yml` and `<board_identifier>.yaml`).
+There may be a slight delay before the board selector appears: the extension runs `west boards` to discover the boards from the west workspace and any custom board locations, and reads the board definition files (`board.yml` and `<board_identifier>.yaml`).
 :::
 
 Use the text area to search your target board, then press `ENTER` to confirm the change.

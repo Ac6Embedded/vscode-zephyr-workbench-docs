@@ -121,6 +121,24 @@ This happens when the flashing/debugging **runner** (e.g. `openocd`, `jlink`) is
 - Alternatively, add the folder containing the runner executable (e.g. `openocd.exe` on Windows, `openocd` on Linux/macOS) to your global PATH.
 
 ---
+## No Boards Listed After Updating Zephyr
+
+After a west workspace moves to a newer Zephyr version, the board pickers may list no board at all, with a message such as:
+```
+Boards could not be listed: west needs the Python module 'jsonschema', which is missing from the dedicated venv of zephyrproject.
+```
+The Python virtual environment (venv) of the workspace was set up for the previous Zephyr version and lacks a module the new one needs. For example, Zephyr 4.3 and later need `jsonschema` to read board definitions, which Zephyr 4.2 and older did not. `west boards` and builds then fail as soon as they start.
+
+### Fix
+
+Click the button of the message, then open the board picker again:
+
+- "Recreate dedicated venv" when the workspace has its own venv. It installs the Python requirements of the workspace's Zephyr version. It is the same action as Manage venv: Create/Recreate Dedicated venv on the workspace (see [Python environments](python-environments.md)).
+- "Reinstall global venv" when the workspace uses the global venv. It is the same action as the button of the [Host Tools Manager](host-tools-manager.md).
+
+When the workspace uses a venv you created yourself, the message has no button: install the Python requirements of the new Zephyr version into that venv, for example with `west packages pip --install` run from the workspace folder with that venv active.
+
+---
 ## Slow Builds - Exclude Workspace from Antivirus
 
 If your Zephyr builds are very slow, real-time antivirus scanning is a common culprit.  
