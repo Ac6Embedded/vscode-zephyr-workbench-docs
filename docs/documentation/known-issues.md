@@ -175,3 +175,27 @@ Only exclude folders you trust. Excluding untrusted folders creates a security r
 - You’ll see the folder added to the list of exclusions immediately.
 
 After adding the exclusions, rebuild your project - build times should be noticeably faster.
+
+---
+## Command Too Long in Command Prompt
+
+When **Command Prompt** (`cmd.exe`) is your default terminal in VS Code, Workbench for Zephyr may warn that a command or your `PATH` is too long for it, or a build, flash or terminal may fail with one of these errors:
+```
+The command line is too long.
+The input line is too long.
+```
+Command Prompt accepts at most **8191 characters** per command, and the same limit applies to `PATH`. Long build options (west arguments, `-D` flags) or a long `PATH` can go past it. PowerShell and Git Bash accept much longer commands.
+
+### Fix: change the default terminal
+
+1. Press **Ctrl+Shift+P** and run **Terminal: Select Default Profile**.
+2. Select **PowerShell** (or **Git Bash**).
+3. Close the open Zephyr terminals, then run the build or flash again.
+
+:::note
+If PowerShell then reports that running scripts is disabled, see [PowerShell Script Execution Disabled](#powershell-script-execution-disabled).
+:::
+
+:::tip
+To keep Command Prompt, shorten your `PATH`: remove folders you no longer use from the Windows environment variables.
+:::
