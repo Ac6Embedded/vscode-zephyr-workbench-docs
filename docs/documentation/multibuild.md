@@ -32,7 +32,7 @@ Right-click on a build configuration to act on that configuration only:
 - **Configure**: Kconfig Manager, Gui Config, Menuconfig, Harden config, Sysbuild (see [Kconfig Manager](configuration/kconfig-manager.md) and the other configuration pages). Kconfig Manager and Sysbuild act on this configuration; for Gui Config, Menuconfig and Harden config, use Set Active on the configuration first (they run on the active configuration).
 - **Analysis**: the same analysis tools as on the application.
 - **Flash/Run** and **Debug**
-- **Build Configuration**: Set Default Flash Runner (see [Flash and Run](flash-run.md)), Change Board, Change West Workspace, Change Toolchain, Change IntelliSense Provider.
+- **Build Configuration**: Set Default Flash Runner (see [Flash and Run](flash-run.md)), Change Board, Change West Workspace, Change Toolchain, Change IntelliSense Provider (see [IntelliSense Provider](configuration/intellisense-provider.md)).
 - **Rename** and **Delete**
 - **Set Active** / **Set Inactive**
 - **Open Terminal**: a terminal with this configuration's environment.

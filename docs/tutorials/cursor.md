@@ -128,7 +128,7 @@ The default debug backend of Workbench for Zephyr, "C/C++ Debug (cppdbg)", needs
 
 This extension is an extension pack: it also installs **clangd**, **CodeLLDB** and **CMake Tools**.
 
-- Since Microsoft's C/C++ extension is not installed and clangd is, Workbench for Zephyr sets the IntelliSense provider of new applications to **clangd** (see "IntelliSense provider" in [Applications](../documentation/application.md#create-a-new-application)).
+- Since Microsoft's C/C++ extension is not installed and clangd is, Workbench for Zephyr sets the IntelliSense provider of new applications to **clangd** (see [IntelliSense Provider](../documentation/configuration/intellisense-provider.md)).
 - CMake Tools may show a "Select a Kit for zephyrproject" list as soon as it is installed. Press *Escape*: Workbench for Zephyr builds with west and does not use CMake Tools kits.
 
 ### Alternative: Cortex-Debug and clangd
@@ -141,7 +141,7 @@ If you prefer, use **Cortex-Debug** and **clangd** instead of the C/C++ extensio
 | IntelliSense | clangd, installed with the pack | **clangd** (`@id:llvm-vs-code-extensions.vscode-clangd`) |
 
 1. Cortex-Debug is normally installed with Workbench for Zephyr. If it is missing, search for `@id:marus25.cortex-debug` in the Extensions view and install it. When you debug, select one of the Cortex-Debug backends in the [Debug Manager](../documentation/debug-session.md#choose-the-debug-backend).
-2. Search for `@id:llvm-vs-code-extensions.vscode-clangd` and install **clangd** before you create your application: Workbench for Zephyr then selects clangd as its IntelliSense provider. For an application that already exists, right-click on it > Build Configuration > Change IntelliSense Provider (see [Applications](../documentation/application.md#manage-applications)).
+2. Search for `@id:llvm-vs-code-extensions.vscode-clangd` and install **clangd** before you create your application: Workbench for Zephyr then selects clangd as its IntelliSense provider. For an application that already exists, right-click on it > Build Configuration > Change IntelliSense Provider (see [IntelliSense Provider](../documentation/configuration/intellisense-provider.md#change-the-provider-of-an-existing-application)).
 
 :::note
 Install at least one of the two options. Without the C/C++ extension for Cursor or clangd, no C/C++ language server is installed and your application gets no IntelliSense.

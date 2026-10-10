@@ -49,7 +49,7 @@ These settings are stored per folder (Workspace Folder scope): on the applicatio
 | `zephyr-workbench.westWorkspace.selectedApplication` | (empty) | Selected application of the workspace, used when it declares several applications. |
 | `zephyr-workbench.sdk` | (empty) | Path of the Zephyr SDK used by the project. The special value `global` lets the build system auto-discover a globally installed SDK. |
 | `zephyr-workbench.toolchain` | `zephyr` | Toolchain variant used for the build (`ZEPHYR_TOOLCHAIN_VARIANT`): `zephyr`, `zephyr/gnu`, `zephyr/llvm`, `gnuarmemb` or `iar`. The legacy value `zephyr_sdk` is migrated to `zephyr` automatically. |
-| `zephyr-workbench.intellisense.provider` | `cpptools` | IntelliSense provider for the application: `cpptools` (C/C++ extension) or `clangd`. |
+| `zephyr-workbench.intellisense.provider` | `cpptools` | IntelliSense provider for the application: `cpptools` (C/C++ extension) or `clangd`. See [IntelliSense Provider](configuration/intellisense-provider.md). |
 | `zephyr-workbench.gnuarmemb` | (empty) | Selected Arm GNU toolchain path (`GNUARMEMB_TOOLCHAIN_PATH`). Must match a registered entry. |
 | `zephyr-workbench.iar` | (empty) | IAR toolchain used by this project. Must match a registered entry. |
 | `zephyr-workbench.rust` | (empty) | Optional Rust toolchain path, independent of the C toolchain selection. |

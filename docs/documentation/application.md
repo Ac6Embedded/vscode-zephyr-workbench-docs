@@ -38,7 +38,7 @@ With "Create new application" selected, fill in:
 6. **Advanced options** (collapsible):
    - "Create a dedicated Python venv for this application": creates a `.venv` used only by this application instead of the workspace or global environment.
    - **Settings paths**: "relative" (default) stores generated paths with `${workspaceFolder}`, "absolute" stores full paths.
-   - **IntelliSense provider**: "C/C++ extension" or "clangd".
+   - **IntelliSense provider**: "C/C++ extension" or "clangd", the extension that gives code completion and navigation (see [IntelliSense Provider](configuration/intellisense-provider.md)).
    - **Applications subfolder**: where the application is created under the west workspace (default `applications`, empty for the workspace root).
 7. Click "Create".
 
@@ -131,7 +131,7 @@ Every application appears in the "Applications" view. Right-click on the applica
   - Change Board (see [Change Board](configuration/change-board.md)).
   - Change West Workspace (see [Change West Workspace](configuration/change-west-workspace.md)).
   - Change Toolchain (see [Change Toolchain](configuration/change-toolchain.md)).
-  - Change IntelliSense Provider: switch between the C/C++ extension and clangd.
+  - Change IntelliSense Provider: switch between the C/C++ extension and clangd (see [IntelliSense Provider](configuration/intellisense-provider.md)).
   - Add Custom Task (see [Add a custom task](#add-a-custom-task)).
   - Python Environment: Create local Python Virtual Environment, Set local Python Virtual Environment, Set global Python Virtual Environment (see [Python Environments](python-environments.md)).
 - **Open Containing Folder**: open the application folder in your file explorer.

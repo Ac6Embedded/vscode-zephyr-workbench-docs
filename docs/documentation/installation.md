@@ -29,7 +29,7 @@ Installing Workbench for Zephyr automatically installs a few companion extension
 
 - **Devicetree Manager for Zephyr** (Ac6): visual editor for the devicetree and pin muxing of your application.
 - **Serial Monitor** (Microsoft): view the serial output of your board.
-- **C/C++** (Microsoft): IntelliSense and debugging support for C and C++ code.
+- **C/C++** (Microsoft): IntelliSense and debugging support for C and C++ code. For IntelliSense, you can use clangd instead (see [IntelliSense Provider](configuration/intellisense-provider.md)).
 - **Cortex-Debug**: debug backend for ARM Cortex-M targets.
 - **File Downloader** (Microsoft DevLabs): used internally to download tools.
 - **DeviceTree Language Server** (by Kyle Bonnici): language features for `.dts` and `.overlay` files (see [DTS LSP Integration](dts-lsp.md)).

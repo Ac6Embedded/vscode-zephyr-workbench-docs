@@ -79,7 +79,7 @@ Right-click on the application:
   - **Select Application**: pick the active application when the west workspace declares several.
   - **Set Default Flash Runner**: pick the runner used by Flash, with optional custom arguments.
   - **Change Board**, **Change West Workspace**, **Change Toolchain**: reassign the target board, workspace or toolchain.
-  - **Change IntelliSense Provider**: switch between the C/C++ extension and clangd.
+  - **Change IntelliSense Provider**: switch between the C/C++ extension and clangd. See [IntelliSense Provider](configuration/intellisense-provider.md).
   - **Add Custom Task**: add your own task (label, command, arguments) to the application's `tasks.json`.
   - **Python Environment** submenu: **Create local Python Virtual Environment**, **Set local Python Virtual Environment**, **Set global Python Virtual Environment**. See [Python environments](python-environments.md).
 - **Open Containing Folder**: open the application folder in your file manager.
