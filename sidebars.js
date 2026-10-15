@@ -92,6 +92,7 @@ const sidebars = {
         'documentation/settings-reference',
         'documentation/vscode-zephyr-workbench-portable',
         'documentation/known-issues',
+        'documentation/sponsorship-and-governance',
         'documentation/about-ac6',
       ],
     },
