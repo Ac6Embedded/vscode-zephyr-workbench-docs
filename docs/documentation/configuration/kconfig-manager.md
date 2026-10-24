@@ -78,6 +78,41 @@ Both open the "Make temporary values permanent" overlay first:
 2. Use the "all" / "none" links to adjust the selection.
 3. Click "Write to `<file>`". The options are written to a managed region of the target file, so re-exporting later updates the same block.
 
+### Disabled options and default values
+
+The export only writes the lines the next build needs to give your values:
+
+- A line is written when, without it, the config files (the board defconfig, `prj.conf` and the fragments) would give the option another value. A disabled bool is written as `CONFIG_FOO=n`.
+- A line of the managed region that is no longer needed is removed. When you set an option back to the value it gets without that line, from the other config files or from its Kconfig default, the line goes and nothing is written in its place.
+
+For example, the `stm32f4_disco` board defconfig sets `CONFIG_HW_STACK_PROTECTION=y`, and the Kconfig default of `HW_STACK_PROTECTION` is `n`: to turn it off, `CONFIG_HW_STACK_PROTECTION=n` is written, because the board defconfig would turn it on again. If an earlier export enabled `CONFIG_ASSERT` (default `n`) and you turn it off, its `CONFIG_ASSERT=y` line is removed, and no `CONFIG_ASSERT=n` is added.
+
+| Type | Kconfig default | Old value set by | Change | Managed region after the export |
+| --- | --- | --- | --- | --- |
+| bool | `y` | No config file (default) | `y` → `n` | `CONFIG_FOO=n` is written |
+| bool | `n` | The board defconfig | `y` → `n` | `CONFIG_FOO=n` is written |
+| bool | `n` | A line you wrote in `prj.conf` | `y` → `n` | `CONFIG_FOO=n` is written |
+| bool | `n` | An earlier export | `y` → `n` | The `CONFIG_FOO=y` line is removed |
+| bool | `n` | An earlier export (`n`), over the board defconfig (`y`) | `n` → `y` | The `CONFIG_FOO=n` line is removed |
+| int | `1024` | The board defconfig (`2048`) | `2048` → `1024` | `CONFIG_FOO=1024` is written |
+| int | `1024` | An earlier export (`2048`) | `2048` → `1024` | The `CONFIG_FOO=2048` line is removed |
+| choice | Member `A` | The board defconfig (member `B`) | `B` → `A` | `CONFIG_FOO_A=y` is written |
+| choice | Member `A` | An earlier export (member `B`) | `B` → `A` | The `CONFIG_FOO_B=y` line is removed |
+
+The Kconfig Manager never changes the lines outside the managed region. When one of your own lines in `prj.conf` sets the option, a line is written in the managed region, which wins as long as the region comes after your line, and a notification lists the options that are also set outside the region. You can delete your own line instead.
+
+Options that only change as a result of your edits are not written, since the next build gives them the same value:
+
+- Options that depend on an option you turned off: they are turned off with it.
+- Options whose default follows an option you changed.
+- The members of a choice that are no longer selected: the line of the selected member is enough.
+
+If a fragment merged after the target file sets the option, that fragment wins and the line has no effect. The overlay flags these entries with a warning icon: use "To fragment…" and select that fragment instead.
+
+:::note
+In a config file, `# CONFIG_FOO is not set` is not a plain comment: Zephyr reads this exact form as `CONFIG_FOO=n` (see [Setting Kconfig configuration values](https://docs.zephyrproject.org/latest/build/kconfig/setting.html#setting-symbols-in-configuration-files)). It is the form used in `.config`, and the one earlier versions of the Kconfig Manager wrote in the managed region. These lines still work, and the export handles them like `CONFIG_FOO=n`.
+:::
+
 ## Keyboard shortcuts
 
 | Key | Action |
