@@ -12,7 +12,16 @@ You pick an application and one of its build configurations, explore the resolve
 :::note Vendor support for the pin configurator
 Browsing the devicetree, editing node properties and generating the overlay work with any board, whatever its vendor.
 
-The interactive chip pinout (the pin configurator) needs a vendor backend to map signals to pads. It currently supports **STM32**, **NXP** (including i.MX RT), **ESP32** and **Silicon Labs** families. On a board from another vendor, the chip view shows an unsupported state while the rest of the editor keeps working.
+The interactive chip pinout (the pin configurator) needs a vendor backend to map signals to pads. It currently supports:
+
+- **STM32**
+- **NXP MCX** (MCX N, A, C and W)
+- **ESP32**
+- **Silicon Labs** Series 2
+- **Renesas RA** and **RA0**: the chip view first asks you to install Renesas's pin data (click **Install**, once).
+- **Infineon** PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700 (available in the next release)
+
+On a board from another vendor or family (NXP Kinetis or i.MX RT, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
 
 More families are on the way. To request one, or to contribute a backend, open an issue or a pull request on the [companion extension's GitHub repository](https://github.com/Ac6Embedded/vscode-devicetree-manager-for-zephyr).
 :::
@@ -69,6 +78,8 @@ The Devicetree Manager guides you to a valid configuration. Enable a peripheral 
 ![Both signals assigned, no issues](/img/zw/devicetree-manager-staged.png)
 
 Other properties (interrupts, registers, and so on) are editable in the same Properties pane.
+
+Pins used as GPIOs (LEDs, buttons, chip selects, reset lines) also show on the chip, with a warning when a pin has two owners. See [GPIOs in the Devicetree Manager](devicetree-manager-gpios.md).
 
 ## Generate the overlay
 
