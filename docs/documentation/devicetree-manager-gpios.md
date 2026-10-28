@@ -1,5 +1,8 @@
 ---
 sidebar_label: GPIOs
+description: "See and edit GPIOs in a Zephyr devicetree with the Devicetree Manager: LEDs, buttons, chip selects and reset lines, their flags, and pins with two owners."
+keywords: [Zephyr GPIO, GPIO devicetree, GPIO overlay, gpios property, GPIO_ACTIVE_LOW, GPIO pull-up, LED devicetree, button devicetree, pin conflict, Zephyr Workbench]
+image: /img/zw/devicetree-manager-gpio-chip.png
 ---
 # GPIOs in the Devicetree Manager
 

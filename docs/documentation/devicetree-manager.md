@@ -14,12 +14,12 @@ Browsing the devicetree, editing node properties and generating the overlay work
 
 The interactive chip pinout (the pin configurator) needs a vendor backend to map signals to pads. It currently supports:
 
-- **STM32**
-- **NXP MCX** (MCX N, A, C and W)
-- **ESP32**
-- **Silicon Labs** Series 2
-- **Renesas RA** and **RA0**: the chip view first asks you to install Renesas's pin data (click **Install**, once).
-- **Infineon** PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700 (available in the next release)
+- [**STM32**](devicetree-manager-pins-stm32.md)
+- [**NXP MCX**](devicetree-manager-pins-nxp.md) (MCX N, A, C and W)
+- [**ESP32**](devicetree-manager-pins-esp32.md)
+- [**Silicon Labs**](devicetree-manager-pins-silabs.md) Series 2
+- [**Renesas RA** and **RA0**](devicetree-manager-pins-renesas.md): the chip view first asks you to install Renesas's pin data (click **Install**, once).
+- [**Infineon**](devicetree-manager-pins-infineon.md) PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700
 
 On a board from another vendor or family (NXP Kinetis or i.MX RT, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
 
@@ -79,7 +79,18 @@ The Devicetree Manager guides you to a valid configuration. Enable a peripheral 
 
 Other properties (interrupts, registers, and so on) are editable in the same Properties pane.
 
-Pins used as GPIOs (LEDs, buttons, chip selects, reset lines) also show on the chip, with a warning when a pin has two owners. See [GPIOs in the Devicetree Manager](devicetree-manager-gpios.md).
+## Peripheral guides
+
+How each vendor writes its pins, and how to change pull-ups, open drain or drive strength: see [Pin configuration](devicetree-manager-pins.md).
+
+Step-by-step pages for the most used peripherals:
+
+- [ADC](devicetree-manager-adc.md): add channels on analog pins and read them from your application (available in the next release).
+- [GPIOs](devicetree-manager-gpios.md): LEDs, buttons, chip selects and reset lines, and pins with two owners.
+- [I2C](devicetree-manager-i2c.md): SCL and SDA, bus speed and the devices on the bus.
+- [PWM](devicetree-manager-pwm.md): outputs with their pin, period and polarity (available in the next release).
+- [SPI](devicetree-manager-spi.md): SCK, MOSI and MISO, and a chip select per device.
+- [UART](devicetree-manager-uart.md): TX and RX, baud rate, flow control and single-wire mode.
 
 ## Generate the overlay
 
