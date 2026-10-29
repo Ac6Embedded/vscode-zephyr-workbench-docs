@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-adc-channel.png
 ---
 # ADC channels in the Devicetree Manager
 
-:::note
-ADC channels are available in the next release of Devicetree Manager for Zephyr.
-:::
-
 A Zephyr ADC reads its inputs through channels: one child node per channel, with its own gain, reference, acquisition time and resolution. Your application reads the channels listed in the `io-channels` property of the `zephyr,user` node. The Devicetree Manager builds the channel from the pin you pick and writes it to your devicetree overlay.
 
 The screenshot uses the STM32F4 Discovery board (`stm32f4_disco`). The steps are the same on the other [supported vendors](devicetree-manager.md).

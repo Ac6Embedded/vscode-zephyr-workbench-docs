@@ -17,6 +17,10 @@ usart3_tx_pd8: usart3_tx_pd8 {
 
 The screenshot uses the STM32F4 Discovery board (`stm32f4_disco`).
 
+:::note
+STM32 F1 is not supported: its pins use remaps, which the chip view doesn't read yet. See [Supported devices](devicetree-manager-support.md).
+:::
+
 ## Route a pin
 
 Click a pad, then the signal in the Functions card (see [Pin configuration](devicetree-manager-pins.md)). The manager adds the pin node to the peripheral's `pinctrl-0`:

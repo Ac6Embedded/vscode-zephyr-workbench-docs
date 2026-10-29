@@ -74,6 +74,7 @@ const sidebars = {
       collapsed: true,
       link: {type: 'doc', id: 'documentation/devicetree-manager'},
       items: [
+        'documentation/devicetree-manager-support',
         {
           type: 'category',
           label: 'Pin configuration',
@@ -81,16 +82,17 @@ const sidebars = {
           link: {type: 'doc', id: 'documentation/devicetree-manager-pins'},
           items: [
             'documentation/devicetree-manager-pins-stm32',
+            'documentation/devicetree-manager-pins-silabs',
             'documentation/devicetree-manager-pins-nxp',
             'documentation/devicetree-manager-pins-nxp-kinetis',
             'documentation/devicetree-manager-pins-nxp-lpc',
             'documentation/devicetree-manager-pins-microchip',
             'documentation/devicetree-manager-pins-esp32',
-            'documentation/devicetree-manager-pins-silabs',
             'documentation/devicetree-manager-pins-renesas',
             'documentation/devicetree-manager-pins-infineon',
           ],
         },
+        'documentation/devicetree-manager-clocks',
         'documentation/devicetree-manager-adc',
         'documentation/devicetree-manager-gpios',
         'documentation/devicetree-manager-i2c',

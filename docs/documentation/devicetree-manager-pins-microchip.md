@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-pins-microchip.png
 ---
 # Microchip SAM and PIC32C pinctrl in the Devicetree Manager
 
-:::note
-Microchip SAM and PIC32C are available in the next release of Devicetree Manager for Zephyr.
-:::
-
 The chip view supports SAM D, SAM C, SAM L, SAM R, SAM D5x / E5x, SAM3X, SAM4E, SAM4L, SAM4S, SAM E70, SAM V71, PIC32CM, PIC32CX and PIC32CZ. A peripheral points to a pinmux node of its own, `<peripheral>_default`, and the node's group lists the pins. Each pin is a name from Microchip's pin header for your chip: `PA8D_SERCOM2_PAD0` is SERCOM2 pad 0 on PA8, peripheral function D.
 
 ```dts

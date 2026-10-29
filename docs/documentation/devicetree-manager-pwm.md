@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-pwm-table.png
 ---
 # PWM outputs in the Devicetree Manager
 
-:::note
-PWM outputs are available in the next release of Devicetree Manager for Zephyr.
-:::
-
 A Zephyr PWM output is a pin driven by a timer channel. A node uses it through its `pwms` property: the PWM controller, the channel, the period and the flags. Here is an LED of the STM32F4 Discovery:
 
 ```dts

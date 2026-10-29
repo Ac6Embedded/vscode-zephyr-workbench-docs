@@ -14,17 +14,19 @@ Browsing the devicetree, editing node properties and generating the overlay work
 
 The interactive chip pinout (the pin configurator) needs a vendor backend to map signals to pads. It currently supports:
 
-- [**STM32**](devicetree-manager-pins-stm32.md)
-- [**NXP MCX**](devicetree-manager-pins-nxp.md) (MCX N, A, C and W)
-- [**NXP Kinetis** and **S32K1**](devicetree-manager-pins-nxp-kinetis.md) (available in the next release)
-- [**NXP LPC**](devicetree-manager-pins-nxp-lpc.md) LPC51U68, LPC54114 and LPC55 (available in the next release)
-- [**Microchip SAM** and **PIC32C**](devicetree-manager-pins-microchip.md) (available in the next release)
-- [**ESP32**](devicetree-manager-pins-esp32.md)
+- [**STM32**](devicetree-manager-pins-stm32.md), every series but F1
 - [**Silicon Labs**](devicetree-manager-pins-silabs.md) Series 2
+- [**NXP MCX**](devicetree-manager-pins-nxp.md) (MCX N, A, C and W)
+- [**NXP Kinetis** and **S32K1**](devicetree-manager-pins-nxp-kinetis.md)
+- [**NXP LPC**](devicetree-manager-pins-nxp-lpc.md) LPC51U68, LPC54114 and LPC55
+- [**Microchip SAM** and **PIC32C**](devicetree-manager-pins-microchip.md)
+- [**ESP32**](devicetree-manager-pins-esp32.md)
 - [**Renesas RA** and **RA0**](devicetree-manager-pins-renesas.md): the chip view first asks you to install Renesas's pin data (click **Install**, once).
 - [**Infineon**](devicetree-manager-pins-infineon.md) PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700
 
 On a board from another vendor or family (NXP i.MX RT or Nordic nRF, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
+
+[Supported devices](devicetree-manager-support.md) lists, family by family, what works for pins and for clocks.
 
 More families are on the way. To request one, or to contribute a backend, open an issue or a pull request on the [companion extension's GitHub repository](https://github.com/Ac6Embedded/vscode-devicetree-manager-for-zephyr).
 :::
@@ -86,12 +88,14 @@ Other properties (interrupts, registers, and so on) are editable in the same Pro
 
 How each vendor writes its pins, and how to change pull-ups, open drain or drive strength: see [Pin configuration](devicetree-manager-pins.md).
 
+How to read and change the clock tree (PLLs, dividers, sources), with checks against the datasheet: see [Clock configuration](devicetree-manager-clocks.md).
+
 Step-by-step pages for the most used peripherals:
 
-- [ADC](devicetree-manager-adc.md): add channels on analog pins and read them from your application (available in the next release).
+- [ADC](devicetree-manager-adc.md): add channels on analog pins and read them from your application.
 - [GPIOs](devicetree-manager-gpios.md): LEDs, buttons, chip selects and reset lines, and pins with two owners.
 - [I2C](devicetree-manager-i2c.md): SCL and SDA, bus speed and the devices on the bus.
-- [PWM](devicetree-manager-pwm.md): outputs with their pin, period and polarity (available in the next release).
+- [PWM](devicetree-manager-pwm.md): outputs with their pin, period and polarity.
 - [SPI](devicetree-manager-spi.md): SCK, MOSI and MISO, and a chip select per device.
 - [UART](devicetree-manager-uart.md): TX and RX, baud rate, flow control and single-wire mode.
 

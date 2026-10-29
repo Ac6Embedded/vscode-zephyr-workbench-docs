@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-pins-nxp-lpc.png
 ---
 # NXP LPC pinctrl in the Devicetree Manager
 
-:::note
-NXP LPC is available in the next release of Devicetree Manager for Zephyr.
-:::
-
 On NXP LPC (LPC51U68, LPC54114, LPC55S0x to LPC55S6x), a peripheral points to a pinmux node of its own, `pinmux_<peripheral>`, and the node's group lists the pins. Each pin is a name from NXP's pin header for your chip: `FC2_RXD_SDA_MOSI_DATA_PIO1_24` is a FlexComm 2 pin on PIO1_24.
 
 ```dts

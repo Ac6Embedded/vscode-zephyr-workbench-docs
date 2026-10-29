@@ -76,11 +76,11 @@ The settings offered come from the vendor's binding. Each vendor page says which
 ## Vendor pages
 
 - [STM32](devicetree-manager-pins-stm32.md)
-- [NXP MCX](devicetree-manager-pins-nxp.md)
-- [NXP Kinetis and S32K1](devicetree-manager-pins-nxp-kinetis.md) (available in the next release)
-- [NXP LPC](devicetree-manager-pins-nxp-lpc.md) (available in the next release)
-- [Microchip SAM and PIC32C](devicetree-manager-pins-microchip.md) (available in the next release)
-- [ESP32](devicetree-manager-pins-esp32.md)
 - [Silicon Labs](devicetree-manager-pins-silabs.md)
+- [NXP MCX](devicetree-manager-pins-nxp.md)
+- [NXP Kinetis and S32K1](devicetree-manager-pins-nxp-kinetis.md)
+- [NXP LPC](devicetree-manager-pins-nxp-lpc.md)
+- [Microchip SAM and PIC32C](devicetree-manager-pins-microchip.md)
+- [ESP32](devicetree-manager-pins-esp32.md)
 - [Renesas RA](devicetree-manager-pins-renesas.md)
 - [Infineon](devicetree-manager-pins-infineon.md)

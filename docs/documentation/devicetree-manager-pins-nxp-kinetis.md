@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-pins-nxp-kinetis.png
 ---
 # NXP Kinetis and S32K1 pinctrl in the Devicetree Manager
 
-:::note
-NXP Kinetis and S32K1 are available in the next release of Devicetree Manager for Zephyr.
-:::
-
 On NXP Kinetis (K, KL, KE, KV, KW and K32L) and S32K1, a peripheral points to a pin group node of its own, `<peripheral>_default`, and the node's group lists the pins. Each pin is a name from NXP's pin header for your chip: `UART1_RX_PTC3` is UART1 RX on pin PTC3.
 
 ```dts
