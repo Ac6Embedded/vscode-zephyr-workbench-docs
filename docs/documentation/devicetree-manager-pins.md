@@ -38,7 +38,7 @@ Vendors write pinctrl in one of two ways.
 };
 ```
 
-**Pin groups** (NXP, ESP32, Silicon Labs, Renesas): the peripheral points to one node of its own, whose groups list the pins and share their settings.
+**Pin groups** (NXP, Microchip, ESP32, Silicon Labs, Renesas): the peripheral points to one node of its own, whose groups list the pins and share their settings.
 
 ```dts
 &i2c1 {
@@ -77,6 +77,9 @@ The settings offered come from the vendor's binding. Each vendor page says which
 
 - [STM32](devicetree-manager-pins-stm32.md)
 - [NXP MCX](devicetree-manager-pins-nxp.md)
+- [NXP Kinetis and S32K1](devicetree-manager-pins-nxp-kinetis.md) (available in the next release)
+- [NXP LPC](devicetree-manager-pins-nxp-lpc.md) (available in the next release)
+- [Microchip SAM and PIC32C](devicetree-manager-pins-microchip.md) (available in the next release)
 - [ESP32](devicetree-manager-pins-esp32.md)
 - [Silicon Labs](devicetree-manager-pins-silabs.md)
 - [Renesas RA](devicetree-manager-pins-renesas.md)

@@ -23,7 +23,7 @@ pinmux_flexcomm4_lpuart: pinmux_flexcomm4_lpuart {
 The screenshots use the FRDM-MCXN947 board.
 
 :::note
-The chip view supports NXP MCX. On other NXP families (Kinetis, i.MX RT), it shows an unsupported state, and the rest of the editor keeps working.
+This page covers NXP MCX. [Kinetis and S32K1](devicetree-manager-pins-nxp-kinetis.md) and [LPC](devicetree-manager-pins-nxp-lpc.md) have their own pages. On i.MX RT, the chip view shows an unsupported state, and the rest of the editor keeps working.
 :::
 
 ## FlexComm pins

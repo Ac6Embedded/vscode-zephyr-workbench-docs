@@ -16,12 +16,15 @@ The interactive chip pinout (the pin configurator) needs a vendor backend to map
 
 - [**STM32**](devicetree-manager-pins-stm32.md)
 - [**NXP MCX**](devicetree-manager-pins-nxp.md) (MCX N, A, C and W)
+- [**NXP Kinetis** and **S32K1**](devicetree-manager-pins-nxp-kinetis.md) (available in the next release)
+- [**NXP LPC**](devicetree-manager-pins-nxp-lpc.md) LPC51U68, LPC54114 and LPC55 (available in the next release)
+- [**Microchip SAM** and **PIC32C**](devicetree-manager-pins-microchip.md) (available in the next release)
 - [**ESP32**](devicetree-manager-pins-esp32.md)
 - [**Silicon Labs**](devicetree-manager-pins-silabs.md) Series 2
 - [**Renesas RA** and **RA0**](devicetree-manager-pins-renesas.md): the chip view first asks you to install Renesas's pin data (click **Install**, once).
 - [**Infineon**](devicetree-manager-pins-infineon.md) PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700
 
-On a board from another vendor or family (NXP Kinetis or i.MX RT, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
+On a board from another vendor or family (NXP i.MX RT or Nordic nRF, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
 
 More families are on the way. To request one, or to contribute a backend, open an issue or a pull request on the [companion extension's GitHub repository](https://github.com/Ac6Embedded/vscode-devicetree-manager-for-zephyr).
 :::

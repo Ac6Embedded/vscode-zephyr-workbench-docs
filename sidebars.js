@@ -82,6 +82,9 @@ const sidebars = {
           items: [
             'documentation/devicetree-manager-pins-stm32',
             'documentation/devicetree-manager-pins-nxp',
+            'documentation/devicetree-manager-pins-nxp-kinetis',
+            'documentation/devicetree-manager-pins-nxp-lpc',
+            'documentation/devicetree-manager-pins-microchip',
             'documentation/devicetree-manager-pins-esp32',
             'documentation/devicetree-manager-pins-silabs',
             'documentation/devicetree-manager-pins-renesas',
