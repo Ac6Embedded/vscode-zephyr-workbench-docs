@@ -69,6 +69,7 @@ A peripheral with a clock setting of its own shows it in its row, for example th
 - A clock or a peripheral fed by a clock that is off.
 - A `clock-frequency` that doesn't match what the settings give.
 - A setting outside the range its binding allows.
+- A setting Zephyr's clock driver refuses to build or to start, for example a TI MSPM0 PLL that is on while SYSOSC runs at 4 MHz.
 
 ![APB1 divided by 2: PCLK1 above its 42 MHz](/img/zw/devicetree-manager-clocks-limit.png)
 

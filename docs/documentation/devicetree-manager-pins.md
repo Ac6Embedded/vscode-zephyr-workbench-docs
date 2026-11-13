@@ -29,7 +29,7 @@ Right-click a pad to list every signal it can carry.
 
 Vendors write pinctrl in one of two ways.
 
-**Pin nodes** (STM32, Infineon): each pin setting is a node of its own, and `pinctrl-0` lists them.
+**Pin nodes** (STM32, Infineon, TI MSPM0 and CC13xx, CC26xx, CC23x0): each pin setting is a node of its own, and `pinctrl-0` lists them.
 
 ```dts
 &usart3 {
@@ -38,7 +38,7 @@ Vendors write pinctrl in one of two ways.
 };
 ```
 
-**Pin groups** (NXP, Microchip, ESP32, Silicon Labs, Renesas): the peripheral points to one node of its own, whose groups list the pins and share their settings.
+**Pin groups** (NXP, Microchip, ESP32, Silicon Labs, Renesas, TI CC32xx): the peripheral points to one node of its own, whose groups list the pins and share their settings.
 
 ```dts
 &i2c1 {
@@ -84,3 +84,4 @@ The settings offered come from the vendor's binding. Each vendor page says which
 - [ESP32](devicetree-manager-pins-esp32.md)
 - [Renesas RA](devicetree-manager-pins-renesas.md)
 - [Infineon](devicetree-manager-pins-infineon.md)
+- [Texas Instruments](devicetree-manager-pins-ti.md) (available in the next release)

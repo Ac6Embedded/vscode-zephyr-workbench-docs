@@ -90,6 +90,7 @@ const sidebars = {
             'documentation/devicetree-manager-pins-esp32',
             'documentation/devicetree-manager-pins-renesas',
             'documentation/devicetree-manager-pins-infineon',
+            'documentation/devicetree-manager-pins-ti',
           ],
         },
         'documentation/devicetree-manager-clocks',

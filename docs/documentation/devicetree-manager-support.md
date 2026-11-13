@@ -1,7 +1,7 @@
 ---
 sidebar_label: Supported devices
-description: "Which chips the Devicetree Manager supports for pin configuration and clocks: STM32, NXP, Microchip, ESP32, Silicon Labs, Renesas and Infineon."
-keywords: [Zephyr supported boards, pin configuration support, pinctrl support, clock tree support, STM32, NXP MCX, ESP32, Silicon Labs, Renesas RA, Infineon PSoC, Zephyr Workbench]
+description: "Which chips the Devicetree Manager supports for pin configuration and clocks: STM32, NXP, Microchip, ESP32, Silicon Labs, Renesas, Infineon and Texas Instruments."
+keywords: [Zephyr supported boards, pin configuration support, pinctrl support, clock tree support, STM32, NXP MCX, ESP32, Silicon Labs, Renesas RA, Infineon PSoC, TI MSPM0, SimpleLink CC13xx, Zephyr Workbench]
 ---
 # Supported devices
 
@@ -42,6 +42,12 @@ In the table:
 | Infineon | PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge | Yes | No |
 | | XMC4500, XMC4700 | Partial (note 5) | No |
 | | Older PSoC 6 kits (CY8CKIT-062-BLE, CY8CKIT-062-WIFI-BT) | No | No |
+| Texas Instruments (available in the next release) | MSPM0 G and L | Partial (note 6) | Yes (note 7) |
+| | MSPM33C | Partial (notes 6 and 8) | Yes (note 8) |
+| | CC13xx, CC26xx | Partial (note 9) | No (note 10) |
+| | CC23x0, CC32xx | Yes | No (note 10) |
+| | AM13E | Partial (note 11) | No |
+| | Sitara AM6x and Jacinto (K3), Tiva C, MSP432 | No | No |
 | Nordic | nRF | No | No |
 | Others | | No | No |
 
@@ -52,6 +58,12 @@ Notes:
 3. **Kinetis K, KL, KV, KW, K32L**: the PLL is set in Kconfig, not in the devicetree, so the view can't show the clock tree.
 4. **Renesas**: the chip view asks you to install Renesas's pin data once (click **Install**).
 5. **Infineon XMC4**: the functions come from Zephyr's pin table. Functions only Infineon's XMCLib lists, such as the USIC chip-select outputs, are not offered.
+6. **TI MSPM0 and MSPM33C**: the build does not say the package, so the chip view shows every pin of the part's series.
+7. **TI MSPM0 clocks**: from Zephyr 4.4. On Zephyr 4.2 and 4.3 the clock tree has another shape, and the view says the board has no clock tree.
+8. **TI MSPM33C**: pins and clocks need the Zephyr release after 4.5. Zephyr 4.5 has no pin table and no clock tree for it.
+9. **TI CC13xx and CC26xx**: the build does not say which DIOs the package has, so the chip view shows DIO0 to DIO31.
+10. **TI CC13xx, CC26xx, CC23x0 and CC32xx clocks**: the devicetree has one fixed system clock. The view shows it with the peripherals on it, with nothing to change or check.
+11. **TI AM13E**: it uses the MSPM0 pin controller, so the chip view shows its pins and functions, from TI's pin file. It is not tested on a board that routes pins.
 
 The vendor pages under [Pin configuration](devicetree-manager-pins.md) say what each vendor's pin configuration sets and checks.
 
