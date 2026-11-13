@@ -6,10 +6,6 @@ image: /img/zw/devicetree-manager-pins-ti.png
 ---
 # Texas Instruments pinctrl in the Devicetree Manager
 
-:::note
-Texas Instruments pin configuration and the MSPM0 clocks are available in the next release of Devicetree Manager for Zephyr.
-:::
-
 Texas Instruments chips write pinctrl in three ways. This page covers each one:
 
 - [MSPM0 G and L, MSPM33C](#mspm0-and-mspm33c): pin nodes, like STM32

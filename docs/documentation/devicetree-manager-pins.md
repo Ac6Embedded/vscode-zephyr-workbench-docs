@@ -84,4 +84,4 @@ The settings offered come from the vendor's binding. Each vendor page says which
 - [ESP32](devicetree-manager-pins-esp32.md)
 - [Renesas RA](devicetree-manager-pins-renesas.md)
 - [Infineon](devicetree-manager-pins-infineon.md)
-- [Texas Instruments](devicetree-manager-pins-ti.md) (available in the next release)
+- [Texas Instruments](devicetree-manager-pins-ti.md)

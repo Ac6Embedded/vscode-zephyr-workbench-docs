@@ -23,7 +23,7 @@ The interactive chip pinout (the pin configurator) needs a vendor backend to map
 - [**ESP32**](devicetree-manager-pins-esp32.md)
 - [**Renesas RA** and **RA0**](devicetree-manager-pins-renesas.md): the chip view first asks you to install Renesas's pin data (click **Install**, once).
 - [**Infineon**](devicetree-manager-pins-infineon.md) PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge, XMC4500 and XMC4700
-- [**Texas Instruments**](devicetree-manager-pins-ti.md) MSPM0 G and L, MSPM33C, CC13xx, CC26xx, CC23x0 and CC32xx (available in the next release)
+- [**Texas Instruments**](devicetree-manager-pins-ti.md) MSPM0 G and L, MSPM33C, CC13xx, CC26xx, CC23x0 and CC32xx
 
 On a board from another vendor or family (NXP i.MX RT or Nordic nRF, for example), the chip view shows an unsupported state while the rest of the editor keeps working.
 

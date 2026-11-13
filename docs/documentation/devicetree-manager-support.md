@@ -42,7 +42,7 @@ In the table:
 | Infineon | PSoC 4, PSoC 6, PSoC Control C3, CYW20829, XMC7000, TRAVEO T2G, PSoC Edge | Yes | No |
 | | XMC4500, XMC4700 | Partial (note 5) | No |
 | | Older PSoC 6 kits (CY8CKIT-062-BLE, CY8CKIT-062-WIFI-BT) | No | No |
-| Texas Instruments (available in the next release) | MSPM0 G and L | Partial (note 6) | Yes (note 7) |
+| Texas Instruments | MSPM0 G and L | Partial (note 6) | Yes (note 7) |
 | | MSPM33C | Partial (notes 6 and 8) | Yes (note 8) |
 | | CC13xx, CC26xx | Partial (note 9) | No (note 10) |
 | | CC23x0, CC32xx | Yes | No (note 10) |
