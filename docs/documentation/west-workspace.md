@@ -73,6 +73,10 @@ This collapsible section appears in **From template** mode:
 - **Location**: the parent folder for the new workspace. Click **Browse...** to pick it.
 - **Subfolder**: the folder created under the Location (default `zephyrproject`). Leave empty to use the selected folder directly. Not used in **Local folder** mode.
 
+:::tip
+On Windows, keep the workspace path short, for example `C:\zephyrproject`, or `Z:\zephyrproject` on a Dev Drive. Long paths can make builds fail, so the wizard warns when the path is longer than 50 characters. See [Workspace Path Too Long on Windows](known-issues.md#workspace-path-too-long-on-windows).
+:::
+
 Click **Import** to start.
 
 ### Import progress

@@ -199,3 +199,45 @@ If PowerShell then reports that running scripts is disabled, see [PowerShell Scr
 :::tip
 To keep Command Prompt, shorten your `PATH`: remove folders you no longer use from the Windows environment variables.
 :::
+
+---
+## Workspace Path Too Long on Windows
+
+On Windows, Workbench for Zephyr warns when you add a west workspace whose path is longer than 50 characters, for example `C:\Users\MyUser\Desktop\Zephyr\TI-demo\zephyrproject`. With such a path, `west update` or a build may fail with errors such as:
+```
+error: unable to create file ...: Filename too long
+The object file directory ... has 214 characters.  The maximum full path to an object file is 250 characters (see CMAKE_OBJECT_PATH_MAX).
+fatal error: opening dependency file ...: No such file or directory
+```
+Most Windows programs accept file paths of at most **260 characters**, and a Zephyr build creates deep paths. CMake can name the folder of a module's object files after the full source path, so the workspace path appears twice. For example, an application in the workspace above that uses the NXP HAL gets this object file, 266 characters long:
+```
+C:\Users\MyUser\Desktop\Zephyr\TI-demo\zephyrproject\apps\blinky\build\primary\modules\hal_nxp\CMakeFiles\modules__hal_nxp.dir\C_\Users\MyUser\Desktop\Zephyr\TI-demo\zephyrproject\deps\modules\hal\nxp\mcux\mcux-sdk-ng\devices\MCX\MCXN\MCXN236\drivers\fsl_clock.c.obj
+```
+With the workspace in `C:\zephyrproject`, the same file takes 194 characters. The path of the application folder counts too, so keep it short as well.
+
+### Fix: use a short path
+
+Put the workspace at a short location with one of the options below. If you already added it at a long path, add it again at the new location instead of moving its folder: the `.venv` and the build folders keep the old path.
+
+#### Option 1: a folder at the root of C:
+
+In the [Add West Workspace](west-workspace.md#add-a-west-workspace) wizard, set **Location** to `C:\`. With the default **Subfolder**, the workspace goes in `C:\zephyrproject`.
+
+#### Option 2 (recommended): a Dev Drive
+
+A Dev Drive is a virtual disk with its own drive letter, for example `Z:`. The workspace gets a short path such as `Z:\zephyrproject`, and Microsoft Defender checks the drive in performance mode, which makes builds faster.
+
+It needs Windows 11 build 22621.2338 or later, administrator rights and at least 50 GB of free disk space.
+
+1. Open **Settings > System > Storage > Advanced storage settings > Disks & volumes**.
+2. Click **Create dev drive**, then select **Create new VHD**.
+3. Enter a name, a location for the virtual disk file (for example `C:\`) and a size of at least 50 GB. Select **VHDX** and **Dynamically expanding**, then click **Create**.
+4. When asked to initialize the disk, select **GPT**, then click **Initialize**.
+5. Enter a label, select the drive letter **Z**, then click **Format**.
+6. In the Add West Workspace wizard, set **Location** to `Z:\`.
+
+Windows mounts the drive again when it starts. If `Z:` is missing after a restart, double-click the `.vhdx` file to mount it. For more details, see [Set up a Dev Drive on Windows 11](https://learn.microsoft.com/windows/dev-drive/).
+
+:::note
+A drive letter made with the `subst` command does not help: west resolves it to the folder it points to, so the build still uses the long path.
+:::
