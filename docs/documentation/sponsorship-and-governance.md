@@ -37,7 +37,6 @@ Small and technical, in the spirit of the Zephyr TSC. Members: one voting repres
 - We look for **consensus first**. Most topics end there.
 - If there is no consensus, the chair calls a **vote**: one vote per member, quorum of half the members, simple majority wins. Votes can be held in the meeting or by email, and the result goes in the notes.
 - **If the vote is a tie, the AC6 vote breaks the tie.**
-- AC6 keeps the final word on the shared core, the project name, and anything that would break silicon vendor neutrality.
 
 ## 7. What stays with AC6
 
